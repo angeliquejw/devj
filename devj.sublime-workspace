@@ -424,8 +424,10 @@
 	},
 	"file_history":
 	[
+		"/C/Sites/devj/.gitignore",
 		"/C/Sites/devj/config.rb",
 		"/C/Sites/devj/source/layout.erb",
+		"/C/Sites/devj/source/layout",
 		"/C/Sites/devj/source/styles/site.scss",
 		"/C/Sites/devj/source/journal/2012-01-01-example-article.html.markdown",
 		"/C/Sites/devj/source/styles/normalize.css",
@@ -549,9 +551,7 @@
 		"/C/Users/angelique/.ssh/id_rsa.pub",
 		"/C/cmdr/vendor/init.bat",
 		"/C/cmdr/config/aliases",
-		"/C/cmdr/config/aliases - Copy",
-		"/C/Sites/devj-mm/source/journal/2015-04-10-first-test.html.markdown",
-		"/C/Sites/devj-mm/source/journal/2015-04-10-code-syntax-highlighting.html.markdown"
+		"/C/cmdr/config/aliases - Copy"
 	],
 	"find":
 	{
