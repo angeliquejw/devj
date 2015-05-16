@@ -1,0 +1,31 @@
+.siteHeader {
+	a:after {
+		@include animation(blink 1500ms steps(5, start) infinite);
+	}
+}
+
+.siteFooter .scrollWrapper {
+	a:hover span {
+		@include animation(roll 700ms linear infinite);
+	}
+}
+
+@keyframes blink {
+	to {
+		visibility: hidden;
+	}
+}
+@-webkit-keyframes blink {
+	to {
+		visibility: hidden;
+	}
+}
+
+@include keyframes(roll) {
+	0% {
+		@include transform(translateY(100%));
+	}
+	100% {
+		@include transform(translateY(-100%));
+	}
+}

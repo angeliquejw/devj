@@ -1,0 +1,17 @@
+---
+pageable: false
+---
+<% @class = "archives l-fullwidth" %>
+
+<h1 class="heading">Article archives</h1>
+
+<% @archives.each do |archive| %>
+	<h2 class="archiveHeadline"><%= archive[:year] %></h2>
+	<ul class="articleList noList">
+		<% archive[:articles].each do |article| %>
+			<li class="articleListItem">
+				<span class="articleHeadline"><%= link_to article.title, article.url %></span>
+			</li>
+		<% end %>
+	</ul>
+<% end %>

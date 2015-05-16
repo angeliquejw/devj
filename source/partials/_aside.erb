@@ -1,0 +1,37 @@
+
+<aside class="siteSidebar elementWrapper">
+	<div class="bioWrapper">
+		<%= image_tag('angelique.jpg', {alt: 'I go type type type'}) %>
+		<div class="bioContent">
+			<p><strong>Dev Journal</strong> is a collection of thoughts about coding and the tech community.</p>
+
+			<% if request.path == "index.html" %>
+			<p class="scrollWrapper">[<a class="scrollLink" title="GOTO NEXT" href="#">more articles</a>]</p>
+			<% else %>
+			<p class="scrollWrapper">[<a title="GOTO HOME" href="/">more articles</a>]</p>
+			<% end %>
+
+			<p><strong>Ang&eacute;lique Weger</strong> writes Dev Journal. She is a senior front-end developer at Detroit Trading and co-organizer of the Baltimore chapter of Girl Develop It. She splits her time between those two cities and her energy between crafting clean, effective code and teaching others to do the same. Strike up a conversation with her about the command line, comic books, Sass and/or sharks.</p>
+		</div>
+		<ul class="socialWrapper noList">
+			<li><a href="https://twitter.com/messypixels" title="Follow me as @messypixels on Twitter" class="iconWrapper"><span class="icon iconTwitter" aria-hidden="true"></span><span class="iconFBText">Twitter</span></a></li>
+			<li><a href="https://www.linkedin.com/in/angeliqueweger" title="View my resume on LinkedIn" class="iconWrapper"><span class="icon iconLinkedin" aria-hidden="true"></span><span class="iconFBText">LinkedIn</span></a></li>
+			<li><a href="github.com/angeliquejw" title="View code I've published on GitHub" class="iconWrapper"><span class="icon iconGithub" aria-hidden="true"></span><span class="iconFBText">GitHub</span></a></li>
+			<li><a href="mailto:hello@angeliqueweger.com" title="Email me" class="iconWrapper"><span class="icon iconMail" aria-hidden="true"></span><span class="iconFBText">Email</span></a></li>
+		</ul>
+	</div>
+	<!--
+	<div class="searchWrapper">
+		<span class="siteSprite iconSearch"></span>
+		<input type="text">
+	</div>
+	-->
+	<ul class="tagCloudWrapper noList">
+		<h3 class="heading">Read More</h3>
+        <% blog.tags.each do |tag, articles| %>
+          <li title="More <%= tag %> posts"><%= link_to "#{tag} (#{articles.size})", tag_path(tag) %></li>
+        <% end %>
+	</ul>
+	<!-- Eventually would like to include widget of Bmore GDI classes here -->
+	<!-- Include: GDI logo, Want to be a dev, too? headline, class widget and link to national site for those outside of Bmore -->
+</aside>

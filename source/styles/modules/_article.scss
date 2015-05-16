@@ -1,0 +1,288 @@
+// LAYOUT
+article {
+	@include respond-at(520px) {
+		margin-bottom:6%;
+	}
+}
+
+.articleHeadline {
+	.l-fullwidth & a {
+		padding:20px 18px;				
+	}
+	a {
+		display: block;
+	}
+}
+
+.articleContent {
+	img {
+		@include size (100% auto);
+	}
+}
+
+.articleFooter {
+	width:100%;
+	ul, li {
+		list-style:none;
+	}
+	.elementWrapper {
+		padding:8px;
+		.metaIntro {
+			display:block;
+		}
+		&.dateWrapper, &.geolocationWrapper  {
+			display:inline-block;
+			width:49%;
+		}
+	}
+	@include respond-at(580px) {
+		@include display(inline-flex);
+		.elementWrapper {
+			&.dateWrapper, &.geolocationWrapper {
+				@include flex(1 1 auto);
+				width:30%;
+			}
+			&.tagWrapper {
+				@include flex(2 1 auto);
+				width:50%;
+			}
+		}
+	}
+}
+
+//TYPOGRAPHY
+.articleHeadline {
+	a:hover {
+		&:after {
+			content:'〉';
+			@include scut-rem-fallback(48);
+			height:48px;
+			line-height: 1;
+			margin-top:-30px;
+			position:absolute;
+			top:50%;
+			right:2%;
+			.featured & {
+				display:none;
+			}
+			@include respond-at(800px) {
+				.l-fullwidth & {
+					display: none;
+				}
+			}
+		}
+	}
+	.featured &, .articleSingle & {
+		margin-bottom:28px;
+	}
+	@include respond-at(800px) {
+		.articleSingle & {
+			@include scut-rem-fallback(32);
+		}
+	}
+}
+
+.articleContent {
+	word-wrap:break-word;
+	h1, h2, h3, h4, h5, h6 {
+		font-family:$bodyfont;
+		@include scut-rem-fallback(18);
+	}
+	h1, h2, h3, h4 {
+		letter-spacing: 2px;
+	}
+	h1, h2 {
+		border-bottom:2px solid $graydk;
+		font-weight: bold;
+		margin:22px 0 12px;
+		.articleSingle & {
+			border-bottom-color:$lime;
+			color:$lime;
+		}
+	}
+	h3 {
+		border-bottom:1px solid $graydk;
+		font-weight: bold;
+		margin:16px 0 10px;
+	}
+	h4 {
+		font-weight: bold;
+		margin:14px 0 6px;
+	}
+	h5 {
+		margin:12px 0 3px;
+		text-transform:uppercase;
+	}
+	h6 {
+		color:$grayli;
+		margin:10px 0 3px;
+		text-transform: uppercase;
+	}
+
+	@include respond-at(480px) {
+		h1, h2 {
+			@include scut-rem-fallback(20);
+		}
+		h1, h2, h3 {
+			border-bottom:0;			
+		}
+		h3, h4, h5 {
+			padding-left:14px;
+			position: relative;
+			&:after {
+				border-radius: 2px;
+				position: absolute;
+				content: '';
+				left: 0;
+				top: 0;
+				bottom: 0;
+				width: 5px;
+			}
+		}
+		h3 {
+			@include scut-rem-fallback(20px);
+			&:after {
+				background:$lime;
+			}
+		}
+		h4, h5, h6 {
+			color:$graydk;			
+		}
+		h4 {
+			&:after {
+				background:lighten($lime,10);
+			}
+		}
+		h5 {
+			text-transform: initial;
+			&:after {
+				background:lighten($lime,25);
+			}
+		}
+	}
+
+	@include respond-at(800px) {
+		.articleSingle & {
+
+			h1, h2 {
+				@include scut-rem-fallback(26px);
+			}
+			h3 {
+				@include scut-rem-fallback(22px);
+			}
+			h4 {
+				@include scut-rem-fallback(20px);
+			}
+		}
+	}
+	p, .highlight {
+		margin-bottom:14px;
+	}
+	p {
+		@include scut-rem-fallback(18px);
+		@include respond-at(580px) {
+			@include scut-rem-fallback(16px);
+		}
+	}
+	dl {
+		dt {
+			font-weight: bold;
+		}
+	}
+	ol, ul {
+		margin-left:35px;
+	}
+	table {
+		width:100%;
+		tr {
+			border-bottom:1px dotted $cyan;
+			&:last-of-type {
+				border-bottom:0;
+			}
+		}
+		th, td {
+			border-right:1px dotted $grayli;
+			padding:1% 2%;
+			&:last-of-type {
+				border-right:0;
+			}
+		}
+	}
+	blockquote, q {
+		background-color:rgba($blue,.25);
+		margin:24px 0;
+		padding:10px 5%;
+		&:first-letter {
+			font-size:300%;
+			font-weight: bold;
+			line-height: 1;
+		}
+		cite {
+			color:$blue;
+			display: block;
+			text-align:right;
+		}
+	}
+	hr {
+		&:before {
+			color:$lime;
+			content:'//';
+			display:block;
+			@include scut-rem-fallback(22px);
+			margin:24px 0;
+		}
+	}
+	a {
+		border-bottom:1px dashed $lime;
+		&:hover {
+			border-style:dotted;
+		}
+	}
+	abbr, acronym {
+		background-color:rgba($blue,.1);
+		padding:0 3px;
+	}
+	cite {
+		color:$grayli;
+	}
+	sup, sub {
+		font-size:65%;
+		@include respond-at(580px) {
+			font-size:70%;			
+		}
+	}
+
+}
+
+.metaIntro, .metaInfo {
+	font-family:$monofont;
+	line-height: 1;
+}
+
+.metaIntro {
+	@include scut-rem-fallback(11);
+	text-transform: uppercase;
+	@include respond-at(480px) {
+		@include scut-rem-fallback(13);
+	}
+}
+.metaInfo {
+	@include scut-rem-fallback(14);
+	letter-spacing: -1px;
+	@include respond-at(480px) {
+		@include scut-rem-fallback(15);
+	}
+}
+
+.tagWrapper {
+	li {
+		display:inline;
+		&:after {
+			content:', ';
+			display:inline;
+		}
+		&:last-of-type:after {
+			content:'';
+		}
+	}
+}

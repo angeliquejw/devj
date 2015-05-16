@@ -1,0 +1,57 @@
+---
+pageable: true
+per_page: 10
+---
+
+<% @class = "homepage l-sidebar" %>
+
+<% if paginate && num_pages > 1 %>
+	<p>Page <%= page_number %> of <%= num_pages %></p>
+
+	<% if prev_page %>
+		<p><%= link_to 'Previous page', prev_page %></p>
+	<% end %>
+<% end %>
+
+<% page_articles.each_with_index do |article, i| %>
+		<article <% if i <= 4 %>class="<% if i == 0 %>first featured<% elsif i <= 3 %>featured<% end %>"<%end%>>
+		<div class="container">
+			<h1 class="articleHeadline" title="<%= article.title %>"><%= link_to article.title, article %></h1>
+			<% if i <= 3 %>
+			<div class="articleContent">
+				<% if i == 0 %>
+				<%= article.summary(750, '...') %>
+				<% else %>
+				<%= article.summary(225, '...') %>
+				<% end %>
+			</div>		
+		</div>
+		<footer class="articleFooter">
+			<div class="tagWrapper elementWrapper">
+				<span class="metaIntro">Tagged</span>
+				<ul>
+				<% article.tags.each do |tag| %>
+					<li class="metaInfo" title="More <%= tag %> posts"><%= link_to tag, tag_path(tag) %></li>
+				<% end %>					
+				</ul>
+			</div>
+			<div class="dateWrapper elementWrapper">
+				<span class="metaIntro">Written on</span>
+				<span class="metaInfo"><%= article.date.strftime('%b %e, %Y') %></span>
+			</div>
+			<div class="geolocationWrapper elementWrapper">
+				<span class="metaIntro">While in</span>
+				<span class="metaInfo"><%= article.data.location %></span>
+			</div>
+		</footer>
+		<% else %>
+		</div>
+		<% end %>
+	</article>
+<% end %>
+
+<% if paginate %>
+	<% if next_page %>
+		<p><%= link_to 'Next page', next_page %></p>
+	<% end %>
+<% end %>

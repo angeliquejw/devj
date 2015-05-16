@@ -1,0 +1,52 @@
+.icon {
+	font-family: 'icofont';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.iconWrapper {
+	.icon {
+		display:none;
+		.fontface.generatedcontent & {
+			display: inline-block;
+		} 
+	}
+	// Hide fallback text
+	.fontface.generatedcontent & .iconFBText {
+		display:block;
+		@include hide-text;
+		@include size(1px);
+	}
+}
+
+.iconCode:before {
+	content: "\f121";
+}
+
+.iconGithub:before {
+	content: "\f092";
+}
+
+.iconLinkedin:before {
+	content: "\f08c";
+}
+
+.iconMail:before {
+	content: "\f0e0";
+}
+
+.iconSearch:before {
+	content: "\f002";
+}
+
+.iconTwitter:before {
+	content: "\f081";
+}

@@ -1,0 +1,301 @@
+@import 'variables', 'libs/scut', 'layout_generic', 'zindex';
+
+// SITE LAYOUT
+.siteHeader {
+	padding:20px 18px;
+}
+
+.container {
+	@include clearfix;
+	margin: 0 auto;
+	position: relative;
+}
+
+.siteWrapper {
+	@include respond-at(520px) {
+		.l-sidebar {
+			padding:9% 6%;
+		}
+	}
+}
+
+.siteFooter {
+	padding-top:50px;
+	ul {
+		max-width:560px;
+	}
+	li {
+		display:inline;
+		&:after {
+			content:'|';
+			padding:0 6px 0 12px;
+		}
+		&:last-of-type:after {
+			display: none;
+		}
+	}
+}
+
+article .container, section, .siteFooter {
+	padding:20px 18px;
+}
+
+@include respond-at(800px) {
+	.l-fullwidth {
+		main {
+			padding:2% 1% 2% 6%;
+		}
+	}
+}
+
+@include respond-at(920px) {
+	.l-sidebar {
+		.siteWrapper {
+			@include display(flex);
+			@include flex-flow(row wrap);
+			.siteHeader {
+				@include flex(0 0 100%);
+			}
+		}
+		main {
+			@include flex(1 1 50%);
+			margin: 3% 3% 0;
+		}
+		aside {
+			@include flex(0 0 300px);
+		}
+	}
+}
+
+@include respond-at(1300px) {
+	.l-sidebar {
+		.siteWrapper {
+			max-width: 1300px;
+		}
+		main {
+			max-width: 775px;
+		}
+	}
+}
+
+
+// ARTICLES -- see modules/article
+
+// PAGES (Archives, tags, etc.)
+.heading {
+	main & {
+		padding:2px 18px 18px;
+	}
+}
+
+.archiveHeadline {
+	padding:0 18px;		
+	@include respond-at(800px) {
+		.l-fullwidth & {
+			border-style:solid;
+			border-bottom-width:2px;
+			line-height: 1;
+			margin-bottom:2%;
+			padding-bottom:1%;
+		}
+	}
+}
+
+main .heading, .archiveHeadline {
+	.l-fullwidth & {
+		@include respond-at(800px) {
+			padding-left:0;
+			padding-right:0;
+		}
+	}
+}
+
+.articleList {
+	@include respond-at(800px) {
+		@include display(flex);
+		@include flex-wrap(wrap);
+		margin-top:1%;
+	}
+}
+
+.articleListItem {
+	position: relative;
+	@include respond-at(800px) {
+		@include flex(1 1 auto);
+		margin:0 5% 5%;
+		width:325px;
+		max-width:50%;
+	}
+}
+
+
+// ASIDE
+aside {
+	// @include respond-at(800px) {
+	// 	.l-fullwidth & {
+	// 		margin-top:6%;
+	// 	}		
+	// }
+	@include respond-at(920px) {
+		.l-sidebar & {
+			margin:3% 3% 6% 0;
+		}
+		.l-fullwidth & {
+			padding:20px 18px;
+		}
+	}
+}
+
+.bioWrapper, .tagCloudWrapper.noList {
+	margin:9px;
+	padding:20px 18px;	
+	@include respond-at(920px) {
+		.l-sidebar & {
+			margin:0;
+			padding:0;
+		}
+	}
+}
+
+.bioWrapper {
+	img {
+		border-radius:50%;
+		display: block;
+		margin:0 auto 5%;
+		min-width:125px;
+		// @include size(125px auto);
+		@include size(30% auto);
+		max-width: 200px;
+		@include respond-at(320px) {
+			display:inline-block;
+			float:left;
+			margin:0 5% 4% 0;			
+		}
+		@include respond-at(1090px) {
+			margin-bottom:0;
+		}
+		@include respond-at(1360px) {
+			margin-right:3%;
+			max-width: 300px;
+		}
+	}
+
+	p {
+		&:first-of-type {
+		}
+		&:nth-of-type(2) {
+			clear:both;
+			@include respond-at(360px) {
+				clear:none;
+				text-align: left;
+			}
+			@include respond-at(600px) {
+				text-align: center;
+			}
+		}
+	}
+	@include respond-at(520px) {
+		margin-bottom:6%;
+	}
+	.l-fullwidth & {
+		@include respond-at(600px) {
+			margin-bottom: 4%;
+		}
+		@include respond-at(920px) {
+			display: inline-block;
+			width:75%;
+			img, .bioContent {
+				vertical-align: top;
+			}
+			img {
+				float:none;
+			}
+			.bioContent {
+				display: inline-block;
+				width:64%;
+			}
+		}
+		.bioContent {
+			@include respond-at(1090px) {
+				width:57%;
+			}
+			@include respond-at(1200px) {
+				width:59%;
+			}
+			@include respond-at(1260px) {
+				width:61%;
+			}
+			@include respond-at(1360px) {
+				width:54%;
+			}
+			@include respond-at(1510px) {
+				@include columns(2 150px);
+				p {
+					-webkit-column-break-inside: avoid;
+					page-break-inside: avoid;
+					break-inside: avoid;					
+					&:first-of-type {
+						margin-top:0;
+					}
+				}
+			}
+			@include respond-at(1600px) {
+				width:58%;
+			}
+		}
+	}
+}
+
+.socialWrapper {
+	clear:both;
+	@include respond-at(625px) {
+		&.noList {
+			max-width:500px;
+			margin-right:auto;
+			margin-left:auto;
+		}
+	}
+	@include respond-at(920px) {
+		.l-fullwidth &.noList {
+			float:left;
+			margin-top:-100px;
+			width:30%;
+			max-width:200px;
+		}
+		.fontface.generatedcontent .l-fullwidth & li {
+			width:45%;
+		}
+	}
+	.l-fullwidth &.noList {
+		@include respond-at(990px) {
+			margin-top:-80px;
+		}
+		@include respond-at(1045px) {
+			margin-top:-60px;
+		}
+		@include respond-at(1090px) {
+			display: inline-block;
+			float:none;
+			margin-top: 0;
+			margin-left:5%;
+			vertical-align: top;
+			width:5%;
+		}
+	}
+	@include respond-at(1090px) {
+		.fontface.generatedcontent .l-fullwidth & li {
+			margin: 14px 0;
+			width:100%;
+		}
+	}
+}
+
+.tagCloudWrapper {
+	@include respond-at(920px) {
+		.l-fullwidth & {
+			display: inline-block;
+			vertical-align: top;
+			width:20%;
+		}
+	}
+}
