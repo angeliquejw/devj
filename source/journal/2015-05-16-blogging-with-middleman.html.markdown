@@ -43,9 +43,11 @@ Also, to be entirely fair, WordPress offers some things out of the box that I do
 A Middleman-based blog is better suited for someone with some dev know how (eg, you know how to get to the command line) or someone willing to jump in and learn some extra stuff along the way.
 
 ##So, you want to install Middleman
-Note: I'm assuming you already have Ruby on your system. I think this is generally true for folks using modern Macs, but for us Windows folks, there's a separate installation process to go through before you can run Middleman. Check out [RubyInstaller for Windows](http://rubyinstaller.org/) and its docs to get yourself sorted.
+I'm assuming you already have Ruby on your system. I think this is generally true for folks using modern Macs, but for us Windows folks, there's a separate installation process to go through before you can run Middleman. Check out [RubyInstaller for Windows](http://rubyinstaller.org/) and its docs to get yourself sorted.
+{: .note}
 
 Don't know if you have Ruby installed? Type `ruby -v` at the command line. If Ruby is installed in your system, you should get a little message about which version of Ruby you're running.
+{: .noteCntd}
 
 <iframe src="//giphy.com/embed/PuWNMebKGIKNG?html5=true" width="480" height="270" frameBorder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 
@@ -102,7 +104,8 @@ $ middleman init woot --template=blog
 
 This will generate some default layouts and a sample article.
 
-Special note for Windows users: You may see an error message here about missing time zone data. In order to create articles, Middleman needs to be able to add the date and time of their creation and, evidently, our systems don't have the file it relies upon to do this. The fix is super easy, though. Open up your project Gemfile and add the following:
+Fellow Windows users: You may see an error message here about missing time zone data. In order to create articles, Middleman needs to be able to add the date and time of their creation and, evidently, our systems don't have the file it relies upon to do this. The fix is super easy, though. Open up your project Gemfile and add the following:
+{: .note}
 
 ~~~rb
 # Fix for missing Windows timezone data
@@ -110,6 +113,7 @@ gem 'tzinfo-data', platforms: [:x64_mingw,:mingw, :mswin]
 ~~~
 
 Then, back at the command line, run `bundle install` to add that gem to the project; boot up `middleman s` again and you should be in business. (If you want to know more about this time zone error, you can read [this GitHub thread about resolving the issue in Middleman Core](https://github.com/middleman/middleman/issues/1097).)
+{: .noteCntd}
 
 ##That's It!
 
@@ -141,6 +145,8 @@ I'll document more about customizing Middleman as I develop this blog and use it
 <hr />
 
 As always, feel free to [send comments to me via Twitter](https://twitter.com/intent/tweet?screen_name=messypixels). Unless you're just going to hassle me for being a Windows user.
+
+<iframe src="//giphy.com/embed/DxGNe8DKWpHz2?html5=true" width="480" height="205" frameBorder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 
 *[CMS]: Content Management System, like blogging software
 *[CSS]: Cascading Stylesheets

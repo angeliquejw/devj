@@ -178,7 +178,7 @@ article {
 			}
 		}
 	}
-	p, ul, ol, .highlight {
+	p, ul, ol, .highlight, img, iframe {
 		margin-bottom:14px;
 	}
 	p, li {
@@ -254,7 +254,27 @@ article {
 			font-size:70%;			
 		}
 	}
-
+	.note, .noteCntd {
+		background-color:white;
+		border-left:5px solid $blue;
+		padding:5%;
+	}
+	.note {
+		padding-top:1%;
+		&:before {
+			color:$blue;
+			content:'//Note';
+			display: block;
+			font-family:$monofont;
+			text-transform: uppercase;
+		}
+		+ .noteCntd {
+			margin-top:-14px;
+		}
+	}
+	.noteCntd {
+		padding-top:0;
+	}
 }
 
 .metaIntro, .metaInfo {
