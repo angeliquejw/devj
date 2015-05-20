@@ -21,5 +21,5 @@ gem 'middleman-syntax'
 # For feed.xml.builder
 gem 'builder', '~> 3.0'
 
-# Windows timezone issue :: https://github.com/middleman/middleman/issues/1097
+# Fix for missing Windows timezone data :: https://github.com/middleman/middleman/issues/1097
 gem 'tzinfo-data', platforms: [:x64_mingw,:mingw, :mswin]

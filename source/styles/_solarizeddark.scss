@@ -50,6 +50,11 @@ green     #859900  operators, other keywords
   user-select: none;
 }
 
+/* No line numbers for bash/shell */
+.highlight.shell .gl {
+  display:none;
+}
+
 .highlight .c { color: #586e75 } /* Comment */
 .highlight .err { color: #93a1a1 } /* Error */
 .highlight .g { color: #93a1a1 } /* Generic */

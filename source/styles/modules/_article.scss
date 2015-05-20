@@ -18,6 +18,9 @@ article {
 	img {
 		@include size (100% auto);
 	}
+	iframe {
+		width:100%;
+	}
 }
 
 .articleFooter {
@@ -175,10 +178,10 @@ article {
 			}
 		}
 	}
-	p, .highlight {
+	p, ul, ol, .highlight {
 		margin-bottom:14px;
 	}
-	p {
+	p, li {
 		@include scut-rem-fallback(18px);
 		@include respond-at(580px) {
 			@include scut-rem-fallback(16px);

@@ -1,14 +1,14 @@
 ---
 title: Mission Statement
-date: 2015-05-16 01:03 EST
+date: 2015-05-13 20:03 EST
 tags: first, women in tech
 location: Baltimore
 ---
 
+I don't follow all the advice I receive via social media and blogs (because, oh, what a surreal life I would lead then!), but a blog by Garann Means found its way to my Twitterstream via [Andy Mangold](https://twitter.com/andymangold/status/378710598433112064), and it is pretty much why this blog exists. Because I have been out here adapting, writing and honing code since my first Geocities (yup!) site in 1996. And I have written many, many, many things online since that time, but I've spent pretty much zero time writing about code or development or design. I knew I would benefit from thinking and writing about code, but&hellip;eh, who has the time? Garann made me see a greater purpose to having a technical blog:
+
 > You, developer in an underrepresented group who hopefully received this link somehow through the magical machinations of social media, should be blogging more. I need you to blog more. Little future developers who look or act or dress or think like you need you to blog more. Your slightly confused and defensive developer community needs you to blog more. Please please please please. And if you are like, "I give zero fucks about what those people need, I need to get off work at six and build charming birdhouses or customize my bicycle or something," the best part is giving zero fucks is totally fine.
 ><cite>&mdash;[Garann Means](http://www.garann.com/dev/2013/how-to-blog-about-code-and-give-zero-fucks/)</cite>
-
-I don't follow all the advice I receive via social media and blogs (because, oh, what a surreal life I would lead then!), but this piece, written by Garann Means found its way to my Twitterstream via [Andy Mangold](https://twitter.com/andymangold/status/378710598433112064), and it is pretty much why this blog exists. Because I have been out here writing and adapting code since my first Geocities (yup!) site in 1996. And I have written many, many, many things online since that time, but I've spent pretty much zero time writing about code or development or design.
 
 Of course, Garann wrote that post and I first saw it back in 2013. I immediately bookmarked it and started writing this intiial post&hellip;and then I landed a few big freelance projects, got involved with [Girl Develop It](http://gdibaltimore.com), got a job, bought a house, sent a kid off to college&hellip;essentially, life happened. But Garran's words were bookmarked, both electronically and in my actual brainspace. And, in the interim, I've been extra aware when I've benefitted from [others writing](http://vaidehijoshi.github.io/) [about code](http://hugogiraudel.com/), their workflow, projects, tips and gripes. And that's made me grateful and motivated to give back, even while still being a bit intimidated. As Garann points out:
 
