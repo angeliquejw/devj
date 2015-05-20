@@ -38,14 +38,14 @@ ready do
   page "/archive.html"  do
     @archives = archive_resources
   end
-  blog.articles.each do |a|
-    page "#{a.url}atom.xml", :proxy => "/atom_single.xml", :layout => false, :ignore => true do
-      @atom_article = a
-    end
-    page "#{a.url}atom.json", :proxy => "/json_single.json", :layout => false, :ignore => true do
-      @atom_article = a
-    end
-  end
+  # blog.articles.each do |a|
+  #   page "#{a.url}atom.xml", :proxy => "/atom_single.xml", :layout => false, :ignore => true do
+  #     @atom_article = a
+  #   end
+  #   page "#{a.url}atom.json", :proxy => "/json_single.json", :layout => false, :ignore => true do
+  #     @atom_article = a
+  #   end
+  # end
 end
 
 # Pretty URLs
@@ -54,7 +54,7 @@ activate :directory_indexes
 # Code Syntax Higlighting
 activate :syntax, line_numbers: true
 
-page "/feed.xml", layout: false
+# page "/feed.xml", layout: false
 
 ###
 # Compass
@@ -92,9 +92,6 @@ page "/feed.xml", layout: false
 
 # Automatic image dimensions on image_tag helper
 # activate :automatic_image_sizes
-
-# Reload the browser automatically whenever files change
-# activate :livereload
 
 # Methods defined in the helpers block are available in templates
 # helpers do
