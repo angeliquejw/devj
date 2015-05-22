@@ -48,8 +48,8 @@ $base: #D4E744;
     &:last-of-type {
       background: darken($base, 20);
     }
-  }  
-} 
+  }
+}
 ~~~
 
 <div class="embedWrapper">
@@ -132,50 +132,50 @@ My own recent contribution was re-configuring some code I wrote two years ago to
 One of the awesome realizations I had in re-configuring this code was how smarter Sass actually also resulted in cleaner markup. My HTML for one row of colors before:
 
 ~~~HTML
-  <div class="row melon">
-    <div class="lightest">
-      <h2>10%</h2>
-      <h2 class="white">10%</h2>
-    </div>
-    <div class="lighter">
-      <h2>5%</h2>
-      <h2 class="white">5%</h2>
-    </div>
-    <div class="light">
-      <h2>3%</h2>
-      <h2 class="white">3%</h2>
-    </div>
-    <div class="main">
-      <h1>melon</h1>
-      <h1 class="white">melon</h1>
-    </div>
-    <div class="dark">
-      <h2>3%</h2>
-      <h2 class="white">3%</h2>
-    </div>
-    <div class="darker">
-      <h2>5%</h2>
-      <h2 class="white">5%</h2>
-    </div>
-    <div class="darkest">
-      <h2>10%</h2>
-      <h2 class="white">10%</h2>
-    </div>
+<div class="row melon">
+  <div class="lightest">
+    <h2>10%</h2>
+    <h2 class="white">10%</h2>
   </div>
+  <div class="lighter">
+    <h2>5%</h2>
+    <h2 class="white">5%</h2>
+  </div>
+  <div class="light">
+    <h2>3%</h2>
+    <h2 class="white">3%</h2>
+  </div>
+  <div class="main">
+    <h1>melon</h1>
+    <h1 class="white">melon</h1>
+  </div>
+  <div class="dark">
+    <h2>3%</h2>
+    <h2 class="white">3%</h2>
+  </div>
+  <div class="darker">
+    <h2>5%</h2>
+    <h2 class="white">5%</h2>
+  </div>
+  <div class="darkest">
+    <h2>10%</h2>
+    <h2 class="white">10%</h2>
+  </div>
+</div>
 ~~~
 
 HTML now:
 
 ~~~HTML
-  <ul class="palette melon">
-    <li><span></span><span></span></li>
-    <li><span></span><span></span></li>
-    <li><span></span><span></span></li>
-    <li><span></span><span></span></li>
-    <li><span></span><span></span></li>
-    <li><span></span><span></span></li>
-    <li><span></span><span></span></li>
-  </ul>
+<ul class="palette melon">
+  <li><span></span><span></span></li>
+  <li><span></span><span></span></li>
+  <li><span></span><span></span></li>
+  <li><span></span><span></span></li>
+  <li><span></span><span></span></li>
+  <li><span></span><span></span></li>
+  <li><span></span><span></span></li>
+</ul>
 ~~~
 
 Not all projects require or benefit from complex color functions like these examples, but it's fun to experiment with what's possible and, when you do need to do something complex, Sass lives up to its promise of making you feel like you have superpowers.

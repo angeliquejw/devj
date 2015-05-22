@@ -17,7 +17,11 @@ green     #859900  operators, other keywords
 */
 
 
-.highlight { background-color: #002b36; color: #93a1a1 }
+.highlight {
+  background-color: #002b36;
+  color: #93a1a1;
+  overflow-x: scroll;
+}
 
 .highlight table {
 	width:100%;
@@ -50,6 +54,10 @@ green     #859900  operators, other keywords
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+
+  pre {
+   word-break: keep-all;
+  }
 }
 
 /* No line numbers for bash/shell */
