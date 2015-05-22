@@ -15,8 +15,7 @@ body {
 .siteHeader {
 	background:$black url(../img/squairy_light.40.png);
 	a {
-		color:$green;
-		&:visited, &:hover, &:active, &:focus {
+		&, &:visited, &:hover, &:active, &:focus {
 			color:$green;
 		}
 	}

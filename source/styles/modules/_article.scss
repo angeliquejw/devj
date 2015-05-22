@@ -18,7 +18,7 @@ article {
 	img {
 		@include size (100% auto);
 	}
-	iframe {
+	iframe, .embedWrapper {
 		display: block;
 		margin-right:auto;
 		margin-left:auto;
@@ -198,7 +198,7 @@ article {
 	ol, ul {
 		margin-left:35px;
 	}
-	table {
+	.table {
 		width:100%;
 		tr {
 			border-bottom:1px dotted $cyan;

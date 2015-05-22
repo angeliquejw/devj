@@ -24,22 +24,24 @@ green     #859900  operators, other keywords
 }
 
 .highlight pre {
-	line-height: 28px;
+	// line-height: 28px;
 	margin:0;
-	padding:14px;
-  white-space: pre-line;
+	padding:12px 0;
   word-break: break-word;
 }
 
 .highlight td {
-  padding: 0;
+  padding: 0 3px;
   vertical-align: top;
 }
 
 /* Styles for line numbers */
-.highlight .gl { 
-  padding-right:18px;
-  width:35px;
+.highlight .gl {
+  background: #01313f;
+  color: #d0edf7;
+  padding-left: 19px;
+  padding-right: 13px;
+  width:50px;
   
   /* Stop line numbers being visually selected */
   -webkit-touch-callout: none;
