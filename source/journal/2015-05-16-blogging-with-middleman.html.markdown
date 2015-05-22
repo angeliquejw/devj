@@ -1,6 +1,6 @@
 ---
 title: Blogging with Middleman
-date: 2015-05-16 11:40 EST
+date: 2015-05-16 21:40 EST
 tags: ruby, rails, middleman
 location: Baltimore
 ---

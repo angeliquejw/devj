@@ -1,6 +1,6 @@
 ---
 title: Getting Sassy with variables and colors
-date: 2015-05-22 01:13 EST
+date: 2015-05-22 05:13 EST
 tags: sass, styles, variables, colors
 location: Baltimore
 ---
