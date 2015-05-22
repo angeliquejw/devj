@@ -18,11 +18,28 @@ article {
 	img {
 		@include size (100% auto);
 	}
-	iframe, .embedWrapper {
+	.embedWrapper {
 		display: block;
 		margin-right:auto;
 		margin-left:auto;
 		max-width:100%;
+		&.giphy {
+			@media only screen and (max-width:359px) {
+				iframe, video {
+					height:150px!important;
+				}
+			}		
+			@media only screen and (min-width:360px) and (max-width:479px) {
+				iframe, video {
+					height:200px!important;
+				}
+			}		
+			@media only screen and (max-width:479px) {
+				iframe, video {
+					width:100%!important;
+				}
+			}
+		}
 	}
 }
 
@@ -310,5 +327,12 @@ article {
 		&:last-of-type:after {
 			content:'';
 		}
+	}
+}
+
+/* CUSTOM STYLES */
+@media only screen and (max-width:535px) {
+	#cp_embed_ZGpORV {
+		height:370px!important;
 	}
 }

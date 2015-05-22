@@ -28,10 +28,8 @@ green     #859900  operators, other keywords
 }
 
 .highlight pre {
-	// line-height: 28px;
 	margin:0;
 	padding:12px 0;
-  word-break: break-word;
 }
 
 .highlight td {
@@ -42,9 +40,6 @@ green     #859900  operators, other keywords
 /* Styles for line numbers */
 .highlight .gl {
   background: #01313f;
-  color: #d0edf7;
-  padding-left: 19px;
-  padding-right: 13px;
   width:50px;
   
   /* Stop line numbers being visually selected */
@@ -55,8 +50,11 @@ green     #859900  operators, other keywords
   -ms-user-select: none;
   user-select: none;
 
-  pre {
-   word-break: keep-all;
+  .lineno {
+    color: #d0edf7;
+    padding-right: 5px;
+    white-space: pre;
+    width:44px;
   }
 }
 

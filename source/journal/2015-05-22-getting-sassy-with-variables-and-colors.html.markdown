@@ -32,7 +32,9 @@ The variables for `$black` and `$lime` don't show up in the final CSS; they're r
 
 While this was enough to make me jump to include Sass in my web development workflow, it barely scratches the surface of what you can do in Sass with colors, variables and the combination of the two.
 
-<iframe src="//giphy.com/embed/3o85xEYc436eIWA51K?html5=true" width="480" height="268" frameBorder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+<div class="embedWrapper giphy">
+  <iframe src="//giphy.com/embed/3o85xEYc436eIWA51K?html5=true" width="480" height="268" frameBorder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+</div>
 
 ##Easy color modifications with Sass
 With Sass, not only can you forgo memorizing hex values, sometimes you manage to use colors without *ever* having known the hex value. For example, if I style a button with a background color and want to either lighten or darken that color when that element is hovered over, I can sort that out easily in Sass:
@@ -180,7 +182,9 @@ HTML now:
 
 Not all projects require or benefit from complex color functions like these examples, but it's fun to experiment with what's possible and, when you do need to do something complex, Sass lives up to its promise of making you feel like you have superpowers.
 
-<iframe src="//giphy.com/embed/TfeXX34FFOoSI?html5=true" width="480" height="209" frameBorder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+<div class="embedWrapper giphy">
+  <iframe src="//giphy.com/embed/TfeXX34FFOoSI?html5=true" width="480" height="209" frameBorder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+</div>
 
 <hr />
 
