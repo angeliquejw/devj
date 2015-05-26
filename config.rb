@@ -54,7 +54,7 @@ activate :directory_indexes
 # Code Syntax Higlighting
 activate :syntax, line_numbers: true
 
-# page "/feed.xml", layout: false
+page "/feed.xml", layout: false
 
 ###
 # Compass
