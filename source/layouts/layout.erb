@@ -15,7 +15,7 @@
 
 		<%= partial "partials/header" %>
 		<div class="container siteWrapper">
-			<main class="elementWrapper">
+			<main class="elementWrapper" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 				<%= yield %>      
 			</main>
 			<%= partial "partials/aside" %>

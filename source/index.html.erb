@@ -14,11 +14,11 @@ per_page: 10
 <% end %>
 
 <% page_articles.each_with_index do |article, i| %>
-		<article <% if i <= 4 %>class="<% if i == 0 %>first featured<% elsif i <= 3 %>featured<% end %>"<%end%>>
+		<article <% if i <= 4 %>class="<% if i == 0 %>first featured<% elsif i <= 3 %>featured<% end %>"<%end%> itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
 		<div class="container">
-			<h1 class="articleHeadline" title="<%= article.title %>"><%= link_to article.title, article %></h1>
+			<h1 class="articleHeadline" title="<%= article.title %>" itemprop="headline"><%= link_to article.title, article %></h1>
 			<% if i <= 3 %>
-			<div class="articleContent">
+			<div class="articleContent" itemprop="description">
 				<% if i == 0 %>
 				<%= article.summary(1000, '...') %>
 				<% else %>
@@ -31,13 +31,13 @@ per_page: 10
 				<span class="metaIntro">Tagged</span>
 				<ul>
 				<% article.tags.each do |tag| %>
-					<li class="metaInfo" title="More <%= tag %> posts"><%= link_to tag, tag_path(tag) %></li>
+					<li class="metaInfo" title="More <%= tag %> posts" itemprop="keywords"><%= link_to tag, tag_path(tag) %></li>
 				<% end %>					
 				</ul>
 			</div>
 			<div class="dateWrapper elementWrapper">
 				<span class="metaIntro">Written on</span>
-				<span class="metaInfo"><%= article.date.strftime('%b %e, %Y') %></span>
+				<span class="metaInfo" itemprop="datePublished"><%= article.date.strftime('%b %e, %Y') %></span>
 			</div>
 			<div class="geolocationWrapper elementWrapper">
 				<span class="metaIntro">While in</span>
