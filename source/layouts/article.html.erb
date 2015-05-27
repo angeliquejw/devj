@@ -15,13 +15,13 @@
 				<span class="metaIntro">Tagged</span>
 				<ul>
 				<% current_article.tags.each do |tag| %>
-					<li class="metaInfo" itemprop="keywords"><%= link_to tag, tag_path(tag), :rel => "tag" %></li>
+					<li class="metaInfo"><%= link_to tag, tag_path(tag), :rel => "tag", :itemprop => "keywords", :title => "More " + tag + " posts" %></li>
 				<% end %>					
 				</ul>
 			</div>
 			<div class="dateWrapper elementWrapper">
 				<span class="metaIntro">Written on</span>
-				<span class="metaInfo" itemprop="datePublished"><%= current_article.date.strftime('%b %e, %Y') %></span>
+				<span class="metaInfo"><time itemprop="datePublished" datetime="<%= current_article.date.strftime('%Y-%m-%dT') %>"><%= current_article.date.strftime('%b %e, %Y') %></time></span>
 			</div>
 			<div class="geolocationWrapper elementWrapper">
 				<span class="metaIntro">While in</span>

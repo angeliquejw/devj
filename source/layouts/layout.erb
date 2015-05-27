@@ -10,12 +10,12 @@
 		<%= feed_tag :atom, "/feed.xml", title: "Atom Feed" %>
 		<link rel="shortcut icon" type="image/x-icon" href="/favicon.png">
 	</head>
-	<body class="<%= @class %>">
+	<body class="<%= @class %>" itemscope itemtype="http://schema.org/WebPage">
 	<%= partial "partials/ga" %>
 
 		<%= partial "partials/header" %>
 		<div class="container siteWrapper">
-			<main class="elementWrapper" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+			<main class="elementWrapper" role="main" itemscope itemtype="http://schema.org/Blog">
 				<%= yield %>      
 			</main>
 			<%= partial "partials/aside" %>
