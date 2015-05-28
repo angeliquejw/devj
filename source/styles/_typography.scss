@@ -1,7 +1,7 @@
 @import 'solarizeddark', 'webfonts';
 
 body {
-	font-family:$bodyfont;
+	font-family:$font-body;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -9,7 +9,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .siteHeader, pre, code {
-	font-family:$monofont;
+	font-family:$font-mono;
 }
 
 .highlight table {
@@ -48,7 +48,7 @@ code {
 }
 
 .siteFooter {
-	font-family:$monofont;
+	font-family:$font-mono;
 	@include scut-rem-fallback(12);
 }
 
@@ -67,7 +67,7 @@ code {
 }
 
 .heading {
-	font-family:$monofont;
+	font-family:$font-mono;
 	text-transform: uppercase;
 	&:before {
 		content:'//';
@@ -76,7 +76,7 @@ code {
 }
 
 .pageHeadline, .sectionHeadline {
-	font-family:$monofont;
+	font-family:$font-mono;
 	@include scut-rem-fallback(48px);
 	line-height:.65;
 	.tags & {

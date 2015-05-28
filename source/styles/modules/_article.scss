@@ -46,23 +46,23 @@ article {
 .articleContent {
 	word-wrap:break-word;
 	h1, h2, h3, h4, h5, h6 {
-		font-family:$bodyfont;
+		font-family:$font-body;
 		@include scut-rem-fallback(18);
 	}
 	h1, h2, h3, h4 {
 		letter-spacing: 2px;
 	}
 	h1, h2 {
-		border-bottom:2px solid $graydk;
+		border-bottom:2px solid $color-greydk;
 		font-weight: bold;
 		margin:22px 0 12px;
 		.articleSingle & {
-			border-bottom-color:$lime;
-			color:$lime;
+			border-bottom-color:$color-lime;
+			color:$color-lime;
 		}
 	}
 	h3 {
-		border-bottom:1px solid $graydk;
+		border-bottom:1px solid $color-greydk;
 		font-weight: bold;
 		margin:16px 0 10px;
 	}
@@ -75,7 +75,7 @@ article {
 		text-transform:uppercase;
 	}
 	h6 {
-		color:$grayli;
+		color:$color-greyli;
 		margin:10px 0 3px;
 		text-transform: uppercase;
 	}
@@ -103,21 +103,21 @@ article {
 		h3 {
 			@include scut-rem-fallback(20px);
 			&:after {
-				background:$lime;
+				background:$color-lime;
 			}
 		}
 		h4, h5, h6 {
-			color:$graydk;			
+			color:$color-greydk;			
 		}
 		h4 {
 			&:after {
-				background:lighten($lime,10);
+				background:lighten($color-lime,10);
 			}
 		}
 		h5 {
 			text-transform: initial;
 			&:after {
-				background:lighten($lime,25);
+				background:lighten($color-lime,25);
 			}
 		}
 	}
@@ -156,13 +156,13 @@ article {
 	.table {
 		width:100%;
 		tr {
-			border-bottom:1px dotted $cyan;
+			border-bottom:1px dotted $color-cyan;
 			&:last-of-type {
 				border-bottom:0;
 			}
 		}
 		th, td {
-			border-right:1px dotted $grayli;
+			border-right:1px dotted $color-greyli;
 			padding:1% 2%;
 			&:last-of-type {
 				border-right:0;
@@ -170,7 +170,7 @@ article {
 		}
 	}
 	blockquote, q {
-		background-color:rgba($blue,.25);
+		background-color:rgba($color-blue,.25);
 		margin:24px 0;
 		padding:10px 5%;
 		&:first-letter {
@@ -179,14 +179,14 @@ article {
 			line-height: 1;
 		}
 		cite {
-			color:$blue;
+			color:$color-blue;
 			display: block;
 			text-align:right;
 		}
 	}
 	hr {
 		&:before {
-			color:$lime;
+			color:$color-lime;
 			content:'//';
 			display:block;
 			@include scut-rem-fallback(22px);
@@ -194,17 +194,17 @@ article {
 		}
 	}
 	a {
-		border-bottom:1px dashed $lime;
+		border-bottom:1px dashed $color-lime;
 		&:hover {
 			border-style:dotted;
 		}
 	}
 	abbr, acronym {
-		background-color:rgba($blue,.1);
+		background-color:rgba($color-blue,.1);
 		padding:0 3px;
 	}
 	cite {
-		color:$grayli;
+		color:$color-greyli;
 	}
 	sup, sub {
 		font-size:65%;
@@ -214,16 +214,16 @@ article {
 	}
 	.note, .noteCntd {
 		background-color:white;
-		border-left:5px solid $blue;
+		border-left:5px solid $color-blue;
 		padding:5%;
 	}
 	.note {
 		padding-top:1%;
 		&:before {
-			color:$blue;
+			color:$color-blue;
 			content:'//Note';
 			display: block;
-			font-family:$monofont;
+			font-family:$font-mono;
 			text-transform: uppercase;
 		}
 		+ .noteCntd {
@@ -290,7 +290,7 @@ article {
 }
 
 .metaIntro, .metaInfo {
-	font-family:$monofont;
+	font-family:$font-mono;
 	line-height: 1;
 }
 

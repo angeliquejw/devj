@@ -1,5 +1,5 @@
 .scrollWrapper {
-	font-family: $monofont;
+	font-family: $font-mono;
 	@include scut-rem-fallback(22);
 	margin:10px 0;
 	text-align: center;

@@ -1,11 +1,11 @@
 @import 'variables';
 
 html {
-	background:$black;
+	background:$color-offblack;
 }
 
 body {
-	color:$black;
+	color:$color-offblack;
 	@include respond-at(520px) {
 		// background-image:url(../img/squairy_light.20.png);
 		background-image:url(../img/bgnoise_lg.20.png);
@@ -13,22 +13,22 @@ body {
 }
 
 .siteHeader {
-	background:$black url(../img/squairy_light.40.png);
+	background:$color-offblack url(../img/squairy_light.40.png);
 	a {
 		&, &:visited, &:hover, &:active, &:focus {
-			color:$green;
+			color:$color-limeli;
 		}
 		&:after {
-			border-color: $green;
+			border-color: $color-limeli;
 		}
 	}
 }
 
 .siteFooter {
-	background:$black;
+	background:$color-offblack;
 	.bmoreLink {
 		a:hover em {
-			color:$violet;
+			color:$color-violet;
 		}
 		em {
 			font-style: normal;
@@ -38,15 +38,15 @@ body {
 
 article, main {
 	a {
-		color:$blue;
+		color:$color-blue;
 		&:hover, &:active, &:focus {
-			color:lighten($blue, 20%);
+			color:lighten($color-blue, 20%);
 		}
 	}
 }
 
 // Code via http://www.elijahmanor.com/dynamic-repeating-sass-colors/
-$articleColors: $orange, $cyan, $violet, $lime;
+$articleColors: $color-orange, $color-cyan, $color-violet, $color-lime;
 @for $i from 1 through length($articleColors) {
 	$articleColors: append($articleColors, lighten(nth($articleColors, $i), 12));
 }
@@ -82,7 +82,7 @@ article {
 
 article {
 	&.featured {
-		background-color:$white;
+		background-color:$color-offwhite;
 		@for $i from 1 through $articleColorsLength {
 			&:nth-of-type(#{$articleColorsLength}n+#{$i}) {
 				.container {
@@ -96,10 +96,10 @@ article {
 	}
 
 	.articleSingle & {
-		background-color:$lime;
-		border-color:$lime;
+		background-color:$color-lime;
+		border-color:$color-lime;
 		.container {
-			background-color:$white;
+			background-color:$color-offwhite;
 		}
 	}
 }
@@ -107,13 +107,13 @@ article {
 .articleHeadline {
 	a {
 		&:visited {
-			color:$blue;
+			color:$color-blue;
 		}
 		&:hover {
-			color:$white;
-			text-shadow: 0 1px 1px rgba($black,0.4);
+			color:$color-offwhite;
+			text-shadow: 0 1px 1px rgba($color-offblack,0.4);
 			.featured & {
-				color:lighten($blue, 20%);
+				color:lighten($color-blue, 20%);
 				text-shadow: none;
 			}
 		}
@@ -122,7 +122,7 @@ article {
 
 .articleContent {
 	code {
-		background:rgba($lime,0.08);
+		background:rgba($color-lime,0.08);
 		.highlight & {
 			background:transparent;
 		}
@@ -130,12 +130,12 @@ article {
 }
 
 .articleFooter {
-	border:1px solid rgba($white,.25);
+	border:1px solid rgba($color-offwhite,.25);
 	.metaIntro {
-		color:$white;
+		color:$color-offwhite;
 		opacity:.75;
 		&:before {
-			color:rgba($white,.6);
+			color:rgba($color-offwhite,.6);
 			content:'//';
 			display: inline;
 		}
@@ -147,9 +147,9 @@ article {
 		&.tagWrapper {
 			border-bottom:$borderTrans;
 			a {
-				color:$graydk;
+				color:$color-greydk;
 				&:hover {
-					color:$black;
+					color:$color-offblack;
 				}
 			}
 			@include respond-at(580px) {
@@ -162,33 +162,33 @@ article {
 
 .heading {
 	main & {
-		color:$grayli;
+		color:$color-greyli;
 	}
 }
 
 .pageHeadline, .sectionHeadline {
-	border-color:$white;
-	color:$white;
+	border-color:$color-offwhite;
+	color:$color-offwhite;
 }
 
 aside, .bioWrapper, .siteFooter {
-	color:$grayli;
+	color:$color-greyli;
 	a {
-	color:$greenli;
+	color:$color-limeli;
 		&:hover, &:active, &:focus {
-			color:$green;
+			color:$color-lime;
 		}
 	}
 	@include respond-at(520px) {
-		color:lighten($grayli,18);
+		color:lighten($color-greyli,18);
 	}
 }
 
 aside {
-	background:$blue;
-	border-top:9px solid $blue;
-	border-bottom:9px solid $blue;
-	color:lighten($grayli,18);
+	background:$color-blue;
+	border-top:9px solid $color-blue;
+	border-bottom:9px solid $color-blue;
+	color:lighten($color-greyli,18);
 	@include respond-at(520px) {
 		.l-sidebar & {
 			background-color:transparent;
