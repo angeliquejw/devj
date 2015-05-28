@@ -6,7 +6,7 @@ pageable: false
 <h1 class="heading">Article archives</h1>
 
 <% @archives.each do |archive| %>
-	<h2 class="archiveHeadline"><%= archive[:year] %></h2>
+	<h2 class="sectionHeadline"><%= archive[:year] %></h2>
 	<ul class="articleList noList">
 		<% archive[:articles].each do |article| %>
 			<li class="articleListItem">

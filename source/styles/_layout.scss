@@ -1,4 +1,4 @@
-@import 'variables', 'libs/scut', 'layout_generic', 'zindex';
+@import 'variables', 'libs/scut', 'layout_generic';
 
 // SITE LAYOUT
 .siteHeader {
@@ -88,8 +88,12 @@ article .container, section, .siteFooter {
 	}
 }
 
-.archiveHeadline {
-	padding:0 18px;		
+.pageHeadline, .sectionHeadline {
+	margin-top:26px;
+	padding:0 18px;
+	&:first-of-type {
+		margin-top: 0;
+	}
 	@include respond-at(800px) {
 		.l-fullwidth & {
 			border-style:solid;
@@ -101,7 +105,7 @@ article .container, section, .siteFooter {
 	}
 }
 
-main .heading, .archiveHeadline {
+main .heading, .pageHeadline, .sectionHeadline {
 	.l-fullwidth & {
 		@include respond-at(800px) {
 			padding-left:0;
@@ -131,11 +135,6 @@ main .heading, .archiveHeadline {
 
 // ASIDE
 aside {
-	// @include respond-at(800px) {
-	// 	.l-fullwidth & {
-	// 		margin-top:6%;
-	// 	}		
-	// }
 	@include respond-at(920px) {
 		.l-sidebar & {
 			margin:3% 3% 6% 0;
@@ -163,7 +162,6 @@ aside {
 		display: block;
 		margin:0 auto 5%;
 		min-width:125px;
-		// @include size(125px auto);
 		@include size(30% auto);
 		max-width: 200px;
 		@include respond-at(320px) {
@@ -181,8 +179,7 @@ aside {
 	}
 
 	p {
-		&:first-of-type {
-		}
+		margin:14px 0;
 		&:nth-of-type(2) {
 			clear:both;
 			@include respond-at(360px) {
@@ -248,6 +245,23 @@ aside {
 
 .socialWrapper {
 	clear:both;
+	li {
+		@include respond-at(380px) {
+			display: inline-block;
+			margin-right:6%;
+			&:last-of-type {
+				margin-right:0;
+			}
+		}
+		.fontface.generatedcontent & {
+			display: inline-block;
+			margin-right:0;
+			width:20%;
+			@include respond-at(350px) {
+				width:24%;
+			}
+		}
+	}
 	@include respond-at(625px) {
 		&.noList {
 			max-width:500px;
@@ -291,6 +305,9 @@ aside {
 }
 
 .tagCloudWrapper {
+	li {
+		display:inline;
+	}
 	@include respond-at(920px) {
 		.l-fullwidth & {
 			display: inline-block;

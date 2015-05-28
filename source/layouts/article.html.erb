@@ -13,7 +13,7 @@
 			<!-- Share links? -->
 			<div class="tagWrapper elementWrapper">
 				<span class="metaIntro">Tagged</span>
-				<ul>
+				<ul class="noList">
 				<% current_article.tags.each do |tag| %>
 					<li class="metaInfo"><%= link_to tag, tag_path(tag), :rel => "tag", :itemprop => "keywords", :title => "More " + tag + " posts" %></li>
 				<% end %>					

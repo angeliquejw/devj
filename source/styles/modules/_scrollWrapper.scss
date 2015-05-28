@@ -1,0 +1,43 @@
+.scrollWrapper {
+	font-family: $monofont;
+	@include scut-rem-fallback(22);
+	margin:10px 0;
+	text-align: center;
+	text-transform: uppercase;
+	.siteFooter & {
+		overflow:hidden;
+	}
+	@include respond-at(720px) {
+		.siteFooter & {
+			display: inline;
+			float:right;
+			width:auto;
+		}
+	}
+	@include respond-at(920px) {
+		.homepage .bioWrapper & {
+			display: none;
+		}
+	}
+	a {
+		display: inline-block;
+		@include scut-rem-fallback(14);
+		line-height: 33px;
+		padding:2px 8px;
+		vertical-align: bottom;
+		&:hover {
+			background-color:rgba(white,.1);
+		}
+		.siteFooter & {
+			width:110px;
+			span {
+				display:block;
+				@include size(100%);
+			}
+			&:hover span {
+				@include scut-rem-fallback(24);
+				letter-spacing: 2px;
+			}
+		}
+	}
+}

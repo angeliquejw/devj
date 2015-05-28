@@ -20,10 +20,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 code {
-	background:rgba($lime,0.08);
 	padding:0 3px;
 	.highlight & {
-		background:transparent;
 		padding:0;
 	}
 }
@@ -35,7 +33,8 @@ code {
 .siteHeader {
 	a {
 		&:after {
-			border-bottom:2px solid $green;
+			border-style:solid;
+			border-bottom-width:2px;
 			content:'';
 			display: inline-block;
 			margin-left:3px;
@@ -44,7 +43,6 @@ code {
 	}
 	h1 {
 		@include scut-rem-fallback(24);
-		// margin-bottom:36px;
 		text-transform: uppercase;
 	}
 }
@@ -55,11 +53,10 @@ code {
 }
 
 
-.articleHeadline, .pageHeadline {
+.articleHeadline {
 	font-family:aleobold, serif;
 	@include scut-rem-fallback(20);
 	letter-spacing:2px;
-	margin:0;	
 	@include respond-at(480px) {
 		@include scut-rem-fallback(22);
 		letter-spacing: 1px;
@@ -78,57 +75,17 @@ code {
 	}
 }
 
-.archiveHeadline {
+.pageHeadline, .sectionHeadline {
 	font-family:$monofont;
 	@include scut-rem-fallback(48px);
 	line-height:.65;
-	margin-top:26px;
-	&:first-of-type {
-		margin-top: 0;
-	}
 	.tags & {
 		text-transform: uppercase;
 	}
 }
 
-aside, .bioWrapper, .siteFooter {
-}
-
-.bioWrapper {
-	p {
-		margin:14px 0;
-		&:first-of-type {
-			// margin:0;
-			// margin-top:36px;
-		}
-	}
-}
-
 .socialWrapper {
 	text-align:center;
-	li {
-		@include respond-at(380px) {
-			display: inline-block;
-			margin-right:6%;
-			&:last-of-type {
-				margin-right:0;
-			}
-		}
-		.fontface.generatedcontent & {
-			display: inline-block;
-			margin-right:0;
-			width:20%;
-			@include respond-at(350px) {
-				width:24%;
-			}
-		}
-		.fontface.generatedcontent .l-fullwidth & {
-			@include respond-at(800px) {
-				// margin:18px 0;
-				// width:100%;
-			}
-		}
-	}
 	.icon {
 		@include scut-rem-fallback(36);
 	}
@@ -136,7 +93,6 @@ aside, .bioWrapper, .siteFooter {
 
 .tagCloudWrapper {
 	li {
-		display: inline;
 		&:after {
 			content:', ';
 			display: inline;
@@ -144,50 +100,6 @@ aside, .bioWrapper, .siteFooter {
 		}
 		&:last-of-type:after {
 			display: none;
-		}
-	}
-}
-
-.scrollWrapper {
-	font-family: $monofont;
-	@include scut-rem-fallback(22);
-	margin:10px 0;
-	text-align: center;
-	text-transform: uppercase;
-	.siteFooter & {
-		overflow:hidden;
-	}
-	@include respond-at(720px) {
-		.siteFooter & {
-			display: inline;
-			float:right;
-			width:auto;
-		}
-	}
-	@include respond-at(920px) {
-		.homepage .bioWrapper & {
-			display: none;
-		}
-	}
-	a {
-		display: inline-block;
-		@include scut-rem-fallback(14);
-		line-height: 33px;
-		padding:2px 8px;
-		vertical-align: bottom;
-		&:hover {
-			background-color:rgba(white,.1);
-		}
-		.siteFooter & {
-			width:110px;
-			span {
-				display:block;
-				@include size(100%);
-			}
-			&:hover span {
-				@include scut-rem-fallback(24);
-				letter-spacing: 2px;
-			}
 		}
 	}
 }

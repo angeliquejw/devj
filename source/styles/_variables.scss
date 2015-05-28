@@ -7,14 +7,10 @@ $grayli : $greyli;
 $blue : #305061;
 
 $orange:#da4f20;
-// $orange:#e15e32;
 $lime: #92bd0a;
-// $lime: #e5f04c;
 $cyan: #049d84;
-// $cyan:#06d9B6;
 $violet:#9c3c86;
 
-// $green : #B0E40C;
 $green : $lime;
 $greenli : #D4E744;
 
@@ -22,9 +18,3 @@ $borderTrans : 1px solid rgba(white,.25);
 
 $bodyfont : aleoregular, serif;
 $monofont : bpmonoregular, monospace;
-
-
-// @mixin layoutSpacing($margin:0, $padding: 20px 18px) {
-// 	margin: $margin;
-// 	padding: $padding;
-// }

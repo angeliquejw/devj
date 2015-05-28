@@ -1,7 +1,5 @@
 /* Solarized Dark 
-
 For use with Jekyll and Pygments
-
 http://ethanschoonover.com/solarized
 
 SOLARIZED HEX      ROLE
@@ -16,51 +14,47 @@ cyan      #2aa198  strings, numbers
 green     #859900  operators, other keywords
 */
 
-
 .highlight {
-  background-color: #002b36;
-  color: #93a1a1;
-  overflow-x: scroll;
-}
-
-.highlight table {
-	width:100%;
-}
-
-.highlight pre {
-	margin:0;
-	padding:12px 0;
-}
-
-.highlight td {
-  padding: 0 3px;
-  vertical-align: top;
+	background-color: #002b36;
+	color: #93a1a1;
+	overflow-x: scroll;
+	pre {
+		margin:0;
+		padding:12px 0;
+	}
+	table {
+		width:100%;
+	}
+	td {
+		padding: 0 3px;
+		vertical-align: top;
+	}
 }
 
 /* Styles for line numbers */
 .highlight .gl {
-  background: #01313f;
-  width:50px;
-  
-  /* Stop line numbers being visually selected */
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+	background: #01313f;
+	width:50px;
 
-  .lineno {
-    color: #d0edf7;
-    padding-right: 5px;
-    white-space: pre;
-    width:44px;
-  }
+	/* Stop line numbers being visually selected */
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+	.lineno {
+		color: #d0edf7;
+		padding-right: 5px;
+		white-space: pre;
+		width:44px;
+	}
 }
 
 /* No line numbers for bash/shell */
 .highlight.shell .gl {
-  display:none;
+	display:none;
 }
 
 .highlight .c { color: #586e75 } /* Comment */

@@ -10,12 +10,7 @@
 	}
 }
 
-@keyframes blink {
-	to {
-		visibility: hidden;
-	}
-}
-@-webkit-keyframes blink {
+@include keyframes(blink) {
 	to {
 		visibility: hidden;
 	}

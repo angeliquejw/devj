@@ -18,6 +18,9 @@ body {
 		&, &:visited, &:hover, &:active, &:focus {
 			color:$green;
 		}
+		&:after {
+			border-color: $green;
+		}
 	}
 }
 
@@ -117,6 +120,15 @@ article {
 	}
 }
 
+.articleContent {
+	code {
+		background:rgba($lime,0.08);
+		.highlight & {
+			background:transparent;
+		}
+	}
+}
+
 .articleFooter {
 	border:1px solid rgba($white,.25);
 	.metaIntro {
@@ -154,11 +166,7 @@ article {
 	}
 }
 
-.pageHeadline {
-	color:$lime;
-}
-
-.archiveHeadline {
+.pageHeadline, .sectionHeadline {
 	border-color:$white;
 	color:$white;
 }
