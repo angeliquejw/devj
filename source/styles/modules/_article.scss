@@ -178,6 +178,13 @@ article {
 			font-weight: bold;
 			line-height: 1;
 		}
+		li {
+			&:first-letter {
+				font-size:initial;
+				font-weight:normal;
+				line-height: initial;
+			}
+		}
 		cite {
 			color:$color-blue;
 			display: block;
