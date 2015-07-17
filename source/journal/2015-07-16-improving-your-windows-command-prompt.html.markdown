@@ -3,7 +3,6 @@ title: Improving Your Windows Command Prompt
 date: 2015-07-16
 location: Baltimore
 tags: windows, command line, command prompt, terminal, cmder, cygwin, powershell
-published: false
 ---
 
 When I started using Git and later learning Ruby, the command line became a place I hung out regularly. Being a Windows user, there were some early frustrations because many of the commands referred to in tutorials and walkthroughs weren't available to me, e.g. `pwd`, `touch`, `sudo`. Since OSX, the Apple OS has been built on top of Unix, Mac users are able to open up Terminal and use the same commands as Unix users, but the same is not true of a basic Windows install.
