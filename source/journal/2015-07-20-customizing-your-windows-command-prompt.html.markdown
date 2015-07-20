@@ -1,6 +1,6 @@
 ---
 title: Customizing Your Windows Command Prompt
-date: 2015-07-20 09:17 EST
+date: 2015-07-20
 location: Baltimore
 tags: windows, command line, command prompt, terminal, cmder, solarized
 ---
