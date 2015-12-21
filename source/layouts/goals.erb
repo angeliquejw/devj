@@ -20,5 +20,13 @@
 		</div> <!-- .container.siteWrapper -->
 
 		<%= javascript_include_tag 'libs/jquery' %>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('.js-menu-trigger,.js-menu-screen').on('click touchstart',function (e) {
+					$('.js-menu,.js-menu-screen').toggleClass('is-visible');
+					e.preventDefault();
+				});
+			});
+		</script>
 	</body>
 </html>

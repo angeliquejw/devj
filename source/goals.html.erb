@@ -9,12 +9,27 @@ pageable: false
 	<h1 class="heading">38 in 38</h1>
 </header>
 
+<button type="button" class="js-menu-trigger slidingPanelButton">
+  About
+</button>
+<div class="js-menu slidingPanelContent">
+	<h2 class="heading">About</h2>
+	<p>My about text goes here.</p>
+	<p><a href="#" class="js-menu-trigger">{ close }</a></p>
+</div>
+<div class="js-menu-screen slidingPanelFadeScreen"></div>
+
 <ul>
 	<% data.goals.goals.each do |goal, index| %>
 	  	<% if goal.completed == true %>
 			<li class="itemComplete">
 				<div class="itemFront">
-					<span><%= goal.goal %></span>
+					<span>
+						<%= goal.goal %>
+						<% if goal.sub %>
+							<small><%= goal.sub %></small>
+						<% end %>
+					</span>
 					<img src="<%= goal.img %>" alt="<%= goal.goal %>"/>
 				</div>
 				<div class="itemBack"
@@ -26,7 +41,12 @@ pageable: false
 		<% else %>
 			<li>
 				<div class="itemFront">
-					<span><%= goal.goal %></span>
+					<span>
+						<%= goal.goal %>
+						<% if goal.sub %>
+							<small><%= goal.sub %></small>
+						<% end %>
+					</span>
 				</div>
 			</li>
 		<% end %>
