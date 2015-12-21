@@ -1,0 +1,143 @@
+@import 'variables';
+
+$font-headline:'Leckerli One', cursive;
+$font-body:'Pompiere', sans-serif;
+$font-alt:'Flamenco', serif;
+
+.goals {
+	background:$color-greyli;
+	font-family:$font-body;
+	font-size:18px;
+}
+
+.goals main {
+	header {
+		background:$color-greydk;
+		padding:36px 0;
+		.heading {
+			color:$color-lime;
+			font-family:$font-headline;
+			font-size:56px;
+			text-align:center;
+			text-transform: none;
+			&:before {
+				display:none;
+			}
+		}
+	}
+
+	ul {
+		margin:42px 0 36px;
+		padding:0;
+		@media only screen and (min-width:480px) {
+			@include display(flex);
+			@include flex-wrap(wrap);
+			margin-right:auto;
+			margin-left:auto;
+			width:90%;
+			max-width:1270px;
+		}
+	}
+
+	$itemColors: $color-orange, $color-cyan, $color-violet, $color-lime;
+	@for $i from 1 through length($itemColors) {
+		$itemColors: append($itemColors, mix(white, nth($itemColors, $i), 25));
+	}
+	$itemColorsLength: length($itemColors);
+
+	li {
+		@for $i from 1 through $itemColorsLength {
+			&:nth-of-type(#{$itemColorsLength}n+#{$i}) .itemFront {
+				background-color: nth($itemColors, $i);
+			}
+		}
+		color:white;
+		font-size:26px;
+		list-style:none;
+		position:relative;
+		span {
+			@include display(flex);
+			@include flex-basis(100%);
+			@include flex-direction(column);
+			@include justify-content(center);
+			padding:15px;
+			position:relative;
+			text-align:center;
+	 		@include size(100% 75px);
+			@media only screen and (min-width:480px) {
+				@include size(165px);		
+			}
+		}
+		small {
+			display:block;
+		}
+	}
+
+	.itemComplete {
+		overflow:hidden;
+		@include size(100% 75px);
+		@media only screen and (min-width:480px) {
+			@include size(165px);		
+		}
+		&:hover {
+			cursor:pointer;
+			.itemFront {
+				@include transform(rotateX(50deg));
+				@include transform(perspective(1000) rotateX(50deg));
+				span {
+					opacity:0;
+				}
+			}
+			.itemBack {
+				@include transform(rotateX(0deg));
+				@include transform(perspective(1000) rotateX(0deg));	
+				z-index:99;
+			}
+		}
+		.itemFront, .itemBack {
+			@include backface-visibility(hidden);
+			display:block;
+			position:absolute;
+			@include transform-style(preserve-3d);
+			@include transition(transform 400ms);
+			@include size(100%);
+		}
+
+		.itemFront {
+			@include transform(perspective(1000) rotateX(0deg));
+			&, span {
+				z-index:90;		
+			}
+			img {
+				border:3px solid transparent;
+				opacity:0.6;
+				position:absolute;
+				top:0;
+				left:0;
+				@include size(100% auto);
+				@media only screen and (max-width:479px) {
+					object-fit:cover;
+					max-height:75px;
+					// IE9 HACK
+					:root img {
+						@include size(auto);
+					}
+					// IE10+ HACK
+					_:-ms-lang(x), img {
+						@include size(auto);
+					} 
+				}
+			}
+		}
+
+		.itemBack {
+			background:$color-greydk;
+			@include transform(rotateX(-180deg));
+			z-index:80;
+			a {
+				color:white;
+				text-decoration:none;
+			}
+		}
+	}
+}

@@ -1,9 +1,14 @@
 ---
+title: 2016 Goals
+layout: goals
 pageable: false
 ---
-<% @class = "goals l-fullwidth" %>
+<% @class = "goals" %>
 
-<h1 class="heading">Goals</h1>
+<header>
+	<h1 class="heading">38 in 38</h1>
+</header>
+
 <ul>
 	<% data.goals.goals.each do |goal, index| %>
 	  	<% if goal.completed == true %>
