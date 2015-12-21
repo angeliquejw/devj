@@ -1,49 +1,53 @@
 .slidingPanelContent {  
-  background: $color-greyli;
-  font-family:$font-alt;
-  @include position(fixed, 0px auto 0px 0px);
-  @include size(220px 100%);
-  @include transform(translateX(-220px));
-  @include transition(all 0.25s linear);
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  padding:36px 18px;
-  z-index: 999999;
+	background: $color-greyli;
+	font-family:$font-alt;
+	@include position(fixed, 0px auto 0px 0px);
+	@include size(220px 100%);
+	@include transform(translateX(-220px));
+	@include transition(all 0.25s linear);
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+	padding:36px 18px;
+	z-index: 999999;
 
-  &.is-visible {
-    @include transform(translateX(0));
-  }
+	&.is-visible {
+		@include transform(translateX(0));
+	}
 
-  .heading {
-    font-size:52px;
-  }
+	.heading {
+		font-size:52px;
+	}
+	@media only screen and (min-width:600px) {
+		@include transform(translateX(-400px));
+		width:400px;
+	}
 }
 
 .slidingPanelFadeScreen {
-  background: black;
-  opacity: 0;
-  @include position(fixed, 0px 0px 0px 0px);
-  @include transition;
-  visibility: hidden;
-  z-index: 999998;
+	background: black;
+	opacity: 0;
+	@include position(fixed, 0px 0px 0px 0px);
+	@include transition;
+	visibility: hidden;
+	z-index: 999998;
 
-  &.is-visible {
-    opacity: 0.6;
-    visibility: visible;
-  }
+	&.is-visible {
+		opacity: 0.6;
+		visibility: visible;
+	}
 }
 
 .slidingPanelButton {
-  background:$color-lime;
-  border-radius: 0 0 9px 9px;
-  cursor: pointer;
-  display: inline-block;
-  font-family:$font-alt;
-  outline: none;
-  margin:0 0 0 6px;
-  padding: 6px 9px;
-  position: relative;
-  text-transform: uppercase;
+	background:$color-lime;
+	border-radius: 0 0 9px 9px;
+	cursor: pointer;
+	display: inline-block;
+	font-family:$font-alt;
+	outline: none;
+	margin:0 0 0 6px;
+	padding: 6px 9px;
+	position: relative;
+	text-transform: uppercase;
 }
 
 // Based on code by Diego Eis
