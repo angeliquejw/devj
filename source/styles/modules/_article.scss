@@ -9,7 +9,7 @@ article {
 	margin:0;
 	a {
 		display: block;
-		&:hover {
+		@include hover-state {
 			&:after {
 				content:'〉';
 				@include scut-rem-fallback(48);
@@ -202,7 +202,7 @@ article {
 	}
 	a {
 		border-bottom:1px dashed $color-lime;
-		&:hover {
+		@include hover-state {
 			border-style:dotted;
 		}
 	}

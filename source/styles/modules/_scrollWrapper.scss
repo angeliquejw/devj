@@ -25,7 +25,7 @@
 		line-height: 33px;
 		padding:2px 8px;
 		vertical-align: bottom;
-		&:hover {
+		@include hover-state {
 			background-color:rgba(white,.1);
 		}
 		.siteFooter & {
@@ -34,9 +34,11 @@
 				display:block;
 				@include size(100%);
 			}
-			&:hover span {
-				@include scut-rem-fallback(24);
-				letter-spacing: 2px;
+			@include hover-state {
+				span {
+					@include scut-rem-fallback(24);
+					letter-spacing: 2px;
+				}
 			}
 		}
 	}
