@@ -1,0 +1,29 @@
+---
+pageable: false
+---
+<% @class = "goals l-fullwidth" %>
+
+<h1 class="heading">Goals</h1>
+<ul>
+	<% data.goals.goals.each do |goal, index| %>
+	  	<% if goal.completed == true %>
+			<li class="itemComplete">
+				<div class="itemFront">
+					<span><%= goal.goal %></span>
+					<img src="<%= goal.img %>" alt="<%= goal.goal %>"/>
+				</div>
+				<div class="itemBack"
+					<a href="<%= goal.url %>">
+						<span>Completed: <%= goal.date %> <small>{ read more }</small></span>
+					</a>
+				</div>
+			</li>
+		<% else %>
+			<li>
+				<div class="itemFront">
+					<span><%= goal.goal %></span>
+				</div>
+			</li>
+		<% end %>
+	<% end %>
+</ul>
