@@ -266,8 +266,37 @@ article {
 				}
 			}
 		}
+		iframe {
+			margin-right:auto;
+			margin-left:auto;
+		}
+	}
+	.articleNav, .readMoreLink {
+		font-family:$font-mono;
+		@include scut-rem-fallback(13px);
+		line-height: 1;
+		text-transform:uppercase;
+		a {
+			border-bottom:0;
+			@include scut-rem-fallback(13px);
+		}
+	}
+	.articleNav {
+		ul {
+			margin: 36px 0 0;
+		}
+		.articlePrev {
+			float:left;
+		}
+		.articleNext {
+			float:right;
+		}
+	}
+	.readMoreLink {
+		float:right;
 	}
 }
+
 
 .articleFooter {
 	width:100%;

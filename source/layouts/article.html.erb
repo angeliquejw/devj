@@ -7,6 +7,16 @@
 			<h1 class="articleHeadline" itemprop="headline"><%= current_article.title %></h1>
 			<div class="articleContent" itemprop="articleBody">
 				<%= yield %>
+				<nav class="articleNav">
+					<ul class="noList">
+						<% if current_article.previous_article %>
+						<li class="articlePrev"><%= link_to '[ << previous ]', current_article.previous_article, :rel => "bookmark" %></li>
+						<% end %>
+						<% if current_article.next_article %>
+						<li class="articleNext"><%= link_to '[ next >> ]', current_article.next_article, :rel => "bookmark" %> </li>
+						<% end %>
+					</ul>
+				</nav>
 			</div>			
 		</div>
 		<footer class="articleFooter">
