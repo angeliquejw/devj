@@ -13,42 +13,124 @@ pageable: false
   About
 </button>
 <div class="js-menu slidingPanelContent">
-	<h2 class="heading">About</h2>
-	<p>My about text goes here.</p>
-	<p><a href="#" class="js-menu-trigger">{ close }</a></p>
+	<h2 class="heading">About This Page</h2>
+	<p>In lieu of resolutions for 2016, I'm opting to be a bit more specific about what I want my life to look like at 38: what I want to make time for, what I value. I'll be updating this page throughout the year, including details about goals in progress and accomplished. My goal is to complete everything on this list before I turn 39 on March 27, 2017.</p>
+	<p class="alignCenter"><a href="#" class="js-menu-trigger">{ close }</a></p>
+	<h2 class="heading">About Me</h2>
+	<p>I write code for a living and then write about code for fun at <strong><a href="/">Dev Journal</a></strong>. I also organize and teach <span itemprop="affiliation">Girl Develop It</span> workshops in Baltimore and am more than a little into the command line, sharks, Sass and goal tracking. Hence this page.</p>
+	<p>If you want to connect with me about any of the above (or just nudge me to update my progress on these goals!), you can find me on <a href="https://twitter.com/messypixels" title="Follow me as @messypixels on Twitter" itemprop="sameAs">Twitter</a> or <a href="mailto:hello@angeliqueweger.com" title="Email me" itemprop="email">send me an email</a>.</p>
+	<p class="alignCenter"><a href="#" class="js-menu-trigger">{ close }</a></p>
 </div>
 <div class="js-menu-screen slidingPanelFadeScreen"></div>
 
-<ul>
-	<% data.goals.goals.each do |goal, index| %>
-	  	<% if goal.completed == true %>
-			<li class="itemComplete">
-				<div class="itemFront">
-					<span>
-						<%= goal.goal %>
-						<% if goal.sub %>
-							<small><%= goal.sub %></small>
-						<% end %>
-					</span>
-					<img src="<%= goal.img %>" alt="<%= goal.goal %>"/>
-				</div>
-				<div class="itemBack"
-					<a href="<%= goal.url %>">
-						<span>Completed: <%= goal.date %> <small>{ read more }</small></span>
-					</a>
-				</div>
-			</li>
-		<% else %>
-			<li>
-				<div class="itemFront">
-					<span>
-						<%= goal.goal %>
-						<% if goal.sub %>
-							<small><%= goal.sub %></small>
-						<% end %>
-					</span>
-				</div>
-			</li>
+<div class="goalSummary">
+	<ul>
+		<! -- Completed goals should look like this: "goal": "Visit 6 museums", "completed": true, "date": "10/2/2016", "img": "http://lorempixel.com/g/300/300/cats", "url": "http://angeliqueweger.com/"} -->
+		<% data.goals.goals.each do |goal, index| %>
+			<% if goal.completed == true %>
+				<li class="itemComplete">
+					<div class="itemFront">
+						<span>
+							<%= goal.goal %>
+							<% if goal.sub %>
+								<small><%= goal.sub %></small>
+							<% end %>
+						</span>
+						<img src="<%= goal.img %>" alt="<%= goal.goal %>"/>
+					</div>
+					<div class="itemBack"
+						<a href="<%= goal.url %>">
+							<span>Completed: <%= goal.date %> <small>{ read more }</small></span>
+						</a>
+					</div>
+				</li>
+			<% else %>
+				<li>
+					<div class="itemFront">
+						<span>
+							<%= goal.goal %>
+							<% if goal.sub %>
+								<small><%= goal.sub %></small>
+							<% end %>
+						</span>
+					</div>
+				</li>
+			<% end %>
 		<% end %>
-	<% end %>
-</ul>
+	</ul>
+</div>
+
+<div class="goalNotes">
+	<div class="container">
+		<p>NOTE: I'm currently at 37 out of 38 goals. I'm okay with this and plan on settling on that last goal (as well as revisiting all of these in case any others no longer feel appropriate) by my birthday, at the end of March.</p>
+		<h2>health + fitness</h2>
+		<ul>
+			<% data.goals.goals.each do |goal, index| %>
+			<% if goal.category == "health + fitness" %>
+			<li><%= goal.goal %> <% if goal.sub %>(<%= goal.sub %>)<% end %></li>
+			<% end %>
+			<% end %>
+		</ul>
+
+		<p>	In 2015, my most explicit resolution was to make regular exercise a part of my life. At the end of 2014, I had to come to acknowledge this wasn't something I hadn't ever achieved as an adult (so, essentially, since I stopped having to take gym class), I had a mainly sedentary job and this combination was changing my body in ways I didn't like. I got an exercise bike that I rode almost daily until the fall when I started running 3 times a week as part of a Couch-to-5k program. I downloaded a handful of fitness apps, took afternoon walks and weekend hikes. I bought new running shoes and a bunch of garb from sections of stores I usually ignored. I also managed to achieve my goals (I've morphed into a person who's a bit cranky when she <em>can't</em> exercise) and surprise myself doing so.</p>
+		<p>This year, I'd like to maintain my successes from last year, as well as complete C25k and run a 5k (hopefully with my husband or some friends).</p>
+		<h2>relationships</h2>
+		<ul>
+			<% data.goals.goals.each do |goal, index| %>
+			<% if goal.category == "relationships" %>
+			<li><%= goal.goal %> <% if goal.sub %>(<%= goal.sub %>)<% end %></li>
+			<% end %>
+			<% end %>
+		</ul>
+		<p>Looking back over 2015, most of what passed as social events for me were tech meetups&hellip;and, while I learned a lot and networked like mad, it didn't bring me the happiness of having folks over in my house (or, sometimes, just on my porch, like for Crafty Porch Sits&trade;). This year, I want to prioritize spending time and connecting with my friends, which is the overarching theme of this group of goals.</p>
+		<p>Additionally, I didn't get back to Chicago last year <em>and</em> one of my sisters had a new baby last month, so getting to see my fam in Chicago was one of the first goals I committed to for 2016.</p>
+		<p>In addition to (physically) distant family, I have several out-of-state friends, hence a focus on connecting with them either by sharing our daily routines (through the photo challenge with Tasha, who lives in Portland; we did this once years ago, and I'm excited to revisit it) and letterwriting.</p>
+
+		<h2>culture + entertainment</h2>
+		<ul>
+			<% data.goals.goals.each do |goal, index| %>
+			<% if goal.category == "culture + entertainment" %>
+			<li><%= goal.goal %> <% if goal.sub %>(<%= goal.sub %>)<% end %></li>
+			<% end %>
+			<% end %>
+		</ul>
+		<p><strong>Books</strong>. Like so many other folks, I do a lot of my reading online in the form of blog posts, news articles and social media. Which is fine, but it's not the same brain adventure as immersing myself in a novel or even a full-length non-fiction book. My house is full of books (some of which I've not even read yet), and I want to make reading them (and escaping from all the online distractions) a more regular part of my life. Additionally, I'm continuing to work on having better sleep habits and reading for 20-30 minutes before bed helps there, too. (Want to keep up with my reading? I joined <a href='https://www.goodreads.com/user/show/50922548-angelique-weger'>GoodReads</a> this month.)</p>
+		<p><strong>Films.</strong> In December 2015, I watched MASH for the first time and realized it was one of my husband's favorite films&hellip;that I hadn't ever seen in 15 years being together. So, we started to discuss what other movies would be in our top 10 and will be sharing them with each other this year.</p>
+
+		<h2>out in the world</h2>
+		<ul>
+			<% data.goals.goals.each do |goal, index| %>
+			<% if goal.category == "out in the world" %>
+			<li><%= goal.goal %> <% if goal.sub %>(<%= goal.sub %>)<% end %></li>
+			<% end %>
+			<% end %>
+		</ul>
+		<p>This group of goals is all about enjoying things and inspiring myself to not get in a rut. Day hikes were a big part of the last two years, however we haven't camped overnight since moving back to Maryland and I'd like to do so at least once this year.</p>
+		<p>Also, I love the Baltimore Love Project murals and have enjoyed encountering them throughout the city. I know there are several I've not seen, though, including one in Detroit. I'd like to make a point of visiting each of the murals this year.</p>
+
+		<h2>diy</h2>
+		<ul>
+			<% data.goals.goals.each do |goal, index| %>
+			<% if goal.category == "diy" %>
+			<li><%= goal.goal %> <% if goal.sub %>(<%= goal.sub %>)<% end %></li>
+			<% end %>
+			<% end %>
+		</ul>
+		<p>The crafty goals on this list are mainly about reminding myself to spend more time away from the computer and, in some instances, Netflix binge watching (though it's easy to do that <em>and</em> knit&hellip;). With the exception of some spinning and holiday gifts, I didn't accomplish much making in 2015 (no painting, fr'ex), and I know my life has room for more, so long as I nudge myself in that direction.</p>
+		<p><strong>Piano.</strong> I spent 2015 picking at my piano keyboard and have come to realize I'm not capable of teaching myself piano. I'm going to find a better method of learning with the goal of being able to play a contemporary song.</p>
+		<p><strong>Food.</strong> While at various times in our relationship, I've done the majority of cooking, 2015 was not one of those periods. I found a handful of new recipes at the beginning of the year that are now part of our repertoire, but otherwise did very little in the kitchen except when we had company over. While I don't see that changing dramatically in 2016, I'd like to spend a bit more time in the kitchen, both to give my husband a break and to continue to inspire us to try new things. Similarly, he spearheaded our garden project while I helped out, and we both took a lot of pleasure eating salsa and eggplant parm that started out as seeds. Like my fitness goals, this is about taking something from the previous year and continuing it.</p>
+
+		<h2>just because</h2>
+		<ul>
+			<% data.goals.goals.each do |goal, index| %>
+			<% if goal.category == "just because" %>
+			<li><%= goal.goal %> <% if goal.sub %>(<%= goal.sub %>)<% end %></li>
+			<% end %>
+			<% end %>
+		</ul>
+		<p>This is an assortment of other personal and professional goals that don't really fit in the other categories. In some instances, it's about providing myself with opportunities to focus on the positive and consider what I truly value. In others, it's about stretching myself as a developer and contributing more to my community. And, well, the tattoo is something I've been plotting for awhile and just want to finally commit to.</p>
+		
+		<h3>credits</h3>
+		<p>Thanks to <a href="http://metacookbook.com">Natasha</a> for inspiring me with her own list of 2016 goals and to <a href="http://nealshaffer.com">Neal Schaffer</a> whose post on Medium, <a href="https://medium.com/@slantsixneal/4-things-to-consider-for-a-better-2016-8b6f1b3f62e1#.xuwb8sw0p">4 Things to Consider for a Better 2016</a> made me reflect on what I wanted to achieve with my goals when I was going down the rabbit hole of obsessing about how to track them.</p>
+	</div>
+</div>

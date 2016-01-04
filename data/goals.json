@@ -1,39 +1,195 @@
-{"goals":[
-    {"_goal": "Visit 6 museums", "completed": true, "date": "10/2/2016", "img": "http://lorempixel.com/g/300/300/cats", "url": "http://angeliqueweger.com/"},
-    {"goal": "Exercise 3x a week", "category": "health + fitness", "completed": false},
-    {"goal": "Maintain current weight", "category": "health + fitness", "completed": false},
-    {"goal": "Run a 5k", "category": "health + fitness", "completed": false},
-    {"goal": "Visit with friend(s) 1x a month", "sub": "Meetups don't count!", "category": "relationships", "completed": false},
-    {"goal": "Go to Chicago", "sub": "Visit fam, meet Ally", "category": "relationships", "completed": false},
-    {"goal": "Send 38 hand-written notes", "category": "relationships", "completed": false},
-    {"goal": "Complete day-in-the-life photo challenge with Tasha", "category": "relationships", "completed": false},
-    {"goal": "Host a non-holiday dinner party", "category": "relationships", "completed": false},
-    {"goal": "Read 1 book a month", "category": "culture + entertainment", "completed": false},
-    {"goal": "Watch each of my Top 10 films", "category": "culture + entertainment", "completed": false},
-    {"goal": "Watch each of husband's Top 10 films", "category": "culture + entertainment", "completed": false},
-    {"goal": "Go camping", "category": "out in the world", "completed": false},
-    {"goal": "Visit all BLP murals", "sub": "BONUS: Find the Detroit mural", "category": "out in the world", "completed": false},
-    {"goal": "Go to 38 new places", "category": "out in the world", "completed": false},
-    {"goal": "Process and spin my fleece", "category": "diy", "completed": false},
-    {"goal": "Play one modern song on the piano", "category": "diy", "completed": false},
-    {"goal": "Cook 12 new recipes", "category": "diy", "completed": false},
-    {"goal": "Knit 1 sweater", "category": "diy", "completed": false},
-    {"goal": "Knit a week's worth of socks", "category": "diy", "completed": false},
-    {"goal": "Paint 4 new canvases", "category": "diy", "completed": false},
-    {"goal": "Complete SkillShare lettering course", "category": "diy", "completed": false},
-    {"goal": "Complete drawing workbook", "category": "diy", "completed": false},
-    {"goal": "Complete painting workbook", "category": "diy", "completed": false},
-    {"goal": "Host a crafty party", "category": "diy", "completed": false},
-    {"goal": "Create a self portrait", "category": "diy", "completed": false},
-    {"goal": "Grow veggies from seed", "category": "diy", "completed": false},
-    {"goal": "Make cheese", "category": "diy", "completed": false},
-    {"goal": "Get a tattoo", "category": "just because", "completed": false},
-    {"goal": "Publish 50 blog posts", "category": "just because", "completed": false},
-    {"goal": "Get professional headshots", "category": "just because", "completed": false},
-    {"goal": "Give away 38 things currently in my house", "category": "just because", "completed": false},
-    {"goal": "Submit a talk to SassConf", "category": "just because", "completed": false},
-    {"goal": "Complete #100happydays photo challenge", "category": "just because", "completed": false},
-    {"goal": "Keep a gratitude journal", "category": "just because", "completed": false},
-    {"goal": "Donate blood 3x", "category": "just because", "completed": false},
-    {"goal": "Do a capsule wardrobe challenge", "category": "just because", "completed": false},
-    {"goal": "Write out 39 goals for next year", "sub": "or a 101 in 1001 list!", "category": "just because", "completed": false}
+{
+    "goals": [
+        {
+            "goal": "Exercise 3x a week",
+            "category": "health + fitness",
+            "completed": false
+        },
+        {
+            "goal": "Maintain current weight",
+            "category": "health + fitness",
+            "completed": false
+        },
+        {
+            "goal": "Run a 5k",
+            "category": "health + fitness",
+            "completed": false
+        },
+        {
+            "goal": "Go to Chicago",
+            "sub": "visit fam, meet Ally",
+            "category": "relationships",
+            "completed": false
+        },
+        {
+            "goal": "Visit with friend(s) 1x a month",
+            "sub": "meetups don't count!",
+            "category": "relationships",
+            "completed": false
+        },
+        {
+            "goal": "Send 38 hand-written notes",
+            "category": "relationships",
+            "completed": false
+        },
+        {
+            "goal": "Complete photo challenge",
+            "sub": "day-in-the-life with Tasha",
+            "category": "relationships",
+            "completed": false
+        },
+        {
+            "goal": "Host a non-holiday dinner party",
+            "category": "relationships",
+            "completed": false
+        },
+        {
+            "goal": "Read 1 book a month",
+            "category": "culture + entertainment",
+            "completed": false
+        },
+        {
+            "goal": "Watch each of my Top 10 films",
+            "category": "culture + entertainment",
+            "completed": false
+        },
+        {
+            "goal": "Watch each of husband's Top 10 films",
+            "category": "culture + entertainment",
+            "completed": false
+        },
+        {
+            "goal": "Go to 38 new places",
+            "category": "out in the world",
+            "completed": false
+        },        {
+            "goal": "Go camping",
+            "category": "out in the world",
+            "completed": false
+        },
+
+        {
+            "goal": "Visit all BLP murals",
+            "sub": "BONUS: find the Detroit mural",
+            "category": "out in the world",
+            "completed": false
+        },
+        {
+            "goal": "Process and spin my fleece",
+            "category": "diy",
+            "completed": false
+        },
+        {
+            "goal": "Play one modern song on the piano",
+            "category": "diy",
+            "completed": false
+        },
+        {
+            "goal": "Cook 12 new recipes",
+            "category": "diy",
+            "completed": false
+        },
+        {
+            "goal": "Knit 1 sweater",
+            "category": "diy",
+            "completed": false
+        },
+        {
+            "goal": "Knit a week's worth of socks",
+            "category": "diy",
+            "completed": false
+        },
+        {
+            "goal": "Complete lettering course",
+            "category": "diy",
+            "completed": false
+        },
+        {
+            "goal": "Complete drawing workbook",
+            "category": "diy",
+            "completed": false
+        },
+        {
+            "goal": "Complete painting workbook",
+            "category": "diy",
+            "completed": false
+        },
+        {
+            "goal": "Paint 4 new canvases",
+            "category": "diy",
+            "completed": false
+        },
+        {
+            "goal": "Create a self portrait",
+            "category": "diy",
+            "completed": false
+        },
+        {
+            "goal": "Host a crafty party",
+            "category": "diy",
+            "completed": false
+        },
+        {
+            "goal": "Grow veggies from seed",
+            "category": "diy",
+            "completed": false
+        },
+        {
+            "goal": "Make cheese",
+            "category": "diy",
+            "completed": false
+        },
+        {
+            "goal": "Get a tattoo",
+            "category": "just because",
+            "completed": false
+        },
+        {
+            "goal": "Publish 50 blog posts",
+            "category": "just because",
+            "completed": false
+        },
+        {
+            "goal": "Get professional headshots",
+            "category": "just because",
+            "completed": false
+        },
+        {
+            "goal": "Submit a talk to SassConf",
+            "category": "just because",
+            "completed": false
+        },
+        {
+            "goal": "Complete photo challenge",
+            "sub": "#100happydays",
+            "category": "just because",
+            "completed": false
+        },
+        {
+            "goal": "Keep a gratitude journal",
+            "category": "just because",
+            "completed": false
+        },
+        {
+            "goal": "Donate blood 3x",
+            "category": "just because",
+            "completed": false
+        },
+        {
+            "goal": "Give away 38 things currently in my house",
+            "category": "just because",
+            "completed": false
+        },
+        {
+            "goal": "Do a capsule wardrobe challenge",
+            "category": "just because",
+            "completed": false
+        },
+        {
+            "goal": "Write out 39 goals for next year",
+            "sub": "or a 101 in 1001 list!",
+            "category": "just because",
+            "completed": false
+        }
+    ]
+}

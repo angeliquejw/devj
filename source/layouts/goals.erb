@@ -18,14 +18,31 @@
 				<%= yield %>      
 			</main>
 		</div> <!-- .container.siteWrapper -->
+		<%= partial "partials/footer-goals" %>		
 
 		<%= javascript_include_tag 'libs/jquery' %>
+		<%= javascript_include_tag 'libs/jquery.scrollTo' %>
 		<script type="text/javascript">
 			$(document).ready(function(){
 				$('.js-menu-trigger,.js-menu-screen').on('click touchstart',function (e) {
 					$('.js-menu,.js-menu-screen').toggleClass('is-visible');
 					e.preventDefault();
 				});
+				$('.scrollLink').click(function() {
+					$.scrollTo($('.goals header'), 1000);
+				});
+				$('.scrollLink').hover(
+					function() {
+						var $this = $(this); // caching $(this)
+						$this.data('initialText', $this.text());
+						$this.text('\u25B2  \u25B2  \u25B2');
+						$this.wrapInner('<span></span>');
+					},
+					function() {
+						var $this = $(this); // caching $(this)
+						$this.text($this.data('initialText'));
+					}
+				);
 			});
 		</script>
 	</body>

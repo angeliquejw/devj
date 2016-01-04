@@ -8,6 +8,10 @@ $font-alt:'Flamenco', serif;
 	background:$color-greyli;
 	font-family:$font-body;
 	font-size:18px;
+	aside {
+		font-family:$font-alt;
+		@include scut-rem-fallback(18);
+	}
 }
 
 .goals main {
@@ -27,7 +31,9 @@ $font-alt:'Flamenco', serif;
 			display:none;
 		}
 	}
+}
 
+.goalSummary {
 	ul {
 		margin:42px 0 36px;
 		padding:0;
@@ -158,5 +164,54 @@ $font-alt:'Flamenco', serif;
 				text-decoration:none;
 			}
 		}
+	}
+}
+
+.goalNotes {
+	background:$color-offwhite;
+	padding:18px 28px;
+	.container {
+		margin:0 auto;
+		max-width:475px;
+	}
+	h2, h3 {
+		border-top:1px solid $color-greyli;
+		margin-top:30px;
+		padding-top:18px;		
+	}
+	h2 {
+		font-family:$font-alt;
+		@include scut-rem-fallback(30);
+		font-weight:600;
+		text-transform:uppercase;
+		&:before {
+			content:'';
+			display:inline;
+			border-left:24px solid $color-lime;
+			margin-right: 6px;
+		}
+		&:first-of-type {
+			border-top:0;
+			padding-top:0;
+		}
+	}
+	h3 {
+		color:$color-violet;
+		font-family:$font-headline;
+		@include scut-rem-fallback(22);
+	}
+	ul {
+		color: $color-lime;
+		margin:12px 0;
+		padding-left:18px;
+	}
+	li {
+		font-family: $font-alt;
+		font-weight:600;
+		list-style-type:disc;
+	}
+	p {
+		@include scut-rem-fallback(24);
+		margin-bottom:9px;
 	}
 }

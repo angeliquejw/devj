@@ -1,5 +1,6 @@
 .slidingPanelContent {  
-	background: $color-greyli;
+	background: rgba($color-greydk,0.9);
+	color:$color-offwhite;
 	font-family:$font-alt;
 	@include position(fixed, 0px auto 0px 0px);
 	@include size(220px 100%);
@@ -15,7 +16,17 @@
 	}
 
 	.heading {
-		font-size:52px;
+		@include scut-rem-fallback(36);
+	}
+	p {
+		@include scut-rem-fallback(22);
+	}
+	a {
+		color:$color-lime;
+		@include hover-state {
+			color:$color-lime;
+			opacity:0.9;
+		}
 	}
 	@media only screen and (min-width:600px) {
 		@include transform(translateX(-400px));
