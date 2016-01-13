@@ -191,10 +191,23 @@ article {
 			text-align:right;
 		}
 	}
-	hr {
+	figcaption, hr {
 		&:before {
 			color:$color-lime;
 			content:'//';
+		}		
+	}
+	figcaption {
+		font-family: $font-mono;
+		font-size:90%;
+		font-style: bold;
+		&:before {
+			display: inline-block;
+			margin-right: 3px;
+		}
+	}
+	hr {
+		&:before {
 			display:block;
 			@include scut-rem-fallback(22px);
 			margin:24px 0;
