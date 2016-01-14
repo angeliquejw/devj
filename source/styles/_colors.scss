@@ -135,7 +135,7 @@ article {
 
 .articleFooter {
 	border:1px solid rgba($color-offwhite,.25);
-	.metaIntro {
+	.metaIntro {																																																																																																																																																																																																																								
 		color:$color-offwhite;
 		opacity:.75;
 		&:before {
@@ -145,21 +145,30 @@ article {
 		}
 	}	
 	.elementWrapper {
-		&:last-of-type {
+		&.geolocationWrapper {
 			border-left:$borderTrans;
+		}
+		&.noteWrapper {
+			border-top:$borderTrans;
+			@include respond-at(580px) {
+				border-top:0;
+				border-left:$borderTrans;
+			}
 		}
 		&.tagWrapper {
 			border-bottom:$borderTrans;
+			@include respond-at(580px) {
+				border-bottom:0;
+				border-right:$borderTrans;
+			}
+		}
+		&.noteWrapper, &.tagWrapper {
 			a {
 				color:$color-greydk;
 				@include hover-state {
 					color:$color-offblack;
 				}
-			}
-			@include respond-at(580px) {
-				border-bottom:0;
-				border-right:$borderTrans;
-			}
+			}			
 		}
 	}
 }

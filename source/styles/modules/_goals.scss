@@ -72,10 +72,7 @@ $font-alt:'Flamenco', serif;
 		list-style:none;
 		position:relative;
 		span {
-			@include display(flex);
-			@include flex-basis(100%);
-			@include flex-direction(column);
-			@include justify-content(center);
+			display:block;
 			padding:15px;
 			position:relative;
 			text-align:center;
@@ -99,7 +96,10 @@ $font-alt:'Flamenco', serif;
 			@include display(flex);
 			min-height:150px;
 			.itemFront, .itemBack {
-				@include flex(1 0 auto);			
+				@include display(flex);
+				@include flex(1 0 auto);
+				@include flex-direction(column);
+				@include justify-content(center);			
 			}
 		}
 		@media only screen and (min-width:550px) {

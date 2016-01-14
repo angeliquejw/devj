@@ -152,6 +152,9 @@ article {
 	}
 	ol, ul {
 		margin-left:35px;
+		ol, ul {
+			margin-bottom: 0;
+		}
 	}
 	.table {
 		width:100%;
@@ -279,6 +282,17 @@ article {
 				}
 			}
 		}
+		&.goodreads {
+			img {
+				@include size(auto);
+			}
+			center a {
+				border-bottom: none;
+				@include hover-state {
+					border-bottom: none;
+				}
+			}
+		}
 		iframe {
 			margin-right:auto;
 			margin-left:auto;
@@ -330,7 +344,7 @@ article {
 				@include flex(1 1 auto);
 				width:30%;
 			}
-			&.tagWrapper {
+			&.tagWrapper, &.noteWrapper {
 				@include flex(2 1 auto);
 				width:50%;
 			}
