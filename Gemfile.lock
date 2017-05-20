@@ -135,8 +135,6 @@ GEM
       hitimes
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
-    tzinfo-data (1.2015.7)
-      tzinfo (>= 1.0.0)
     uber (0.0.15)
     uglifier (2.7.2)
       execjs (>= 0.3.0)
@@ -155,7 +153,3 @@ DEPENDENCIES
   middleman-livereload
   middleman-syntax
   nokogiri
-  tzinfo-data
-
-BUNDLED WITH
-   1.11.2

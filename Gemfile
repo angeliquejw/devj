@@ -22,4 +22,4 @@ gem 'middleman-syntax'
 gem 'builder', '~> 3.0'
 
 # Fix for missing Windows timezone data :: https://github.com/middleman/middleman/issues/1097
-gem 'tzinfo-data', platforms: [:x64_mingw,:mingw, :mswin]
+# gem 'tzinfo-data', platforms: [:x64_mingw,:mingw, :mswin]
