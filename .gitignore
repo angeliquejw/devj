@@ -6,3 +6,6 @@
 # Ignore Sublime files
 devj.sublime-project
 devj.sublime-workspace
+
+# Ignore deploy notes
+deploy.txt

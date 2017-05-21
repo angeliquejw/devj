@@ -1,7 +1,7 @@
 ---
 title: First week on macOS
-date: 2017-05-21 8:55 EST
-tags: mac
+date: 2017-05-21 3:30 EST
+tags: mac, first, apps, software, resources
 location: Baltimore
 ---
 
