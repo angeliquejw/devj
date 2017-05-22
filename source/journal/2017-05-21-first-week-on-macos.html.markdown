@@ -39,7 +39,13 @@ Two apps that migrated with me from my Windows days:
 * [Flux](https://justgetflux.com/)&mdash;I *always* notice when I'm using a machine sans Flux. After installing, I learned macOS has some eyestrain-reducing features baked in, but I haven't done a comparison, so flux is still there, running and being lovely
 * [Visual Studio Code](https://code.visualstudio.com/)&mdash;I may be the only dev on my team using this code editor, but I have really grown to love it. I find it to be zippy and the Git integration to be awesome. 👍
 
-One week in, my only current major pain point is my Razer keyboard; the Razer software seems to hate macOS (my custom settings occasionally delete/reset themselves?). I'll make an attempt to update this one month in (Will I still be attempting to close windows the Windows way? Tune in!), as there seem to be many blog posts about and for Mac power users (versus folks making their first foray into the Mac ecosystem) and even some good series about making the transition to Windows as a developer (thinking mainly of one of the ShopTalk guys here, see [#davegoeswindows](http://daverupert.com/tag/davegoeswindows).)
+One week in, my only current major pain point is my Razer keyboard; the Razer software seems to hate macOS (my custom settings occasionally delete/reset themselves?). I'm trying, at this point, to avoid going down the rabbit hole of researching new Mac-friendly mechanical keyboards.
+
+I'll make an attempt to update this one month in (Will I still be attempting to close windows the Windows way? Tune in!). While there seem to be many blog posts about and for Mac power users, there is not as much discussion around folks making the switch to Mac (for the reverse, devs transitioning to Windows, check out the [#davegoeswindows](http://daverupert.com/tag/davegoeswindows) series by one of the ShopTalk guys). So, hopefully this can be a good resource for other old dogs learning new tricks.
+
+<div class="embedWrapper giphy">
+<iframe src="https://giphy.com/embed/kNjoM9UQUX612" width="480" height="263" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+</div>
 
 <hr />
 
