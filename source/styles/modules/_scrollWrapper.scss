@@ -9,9 +9,8 @@
 	}
 	@include respond-at(720px) {
 		.siteFooter & {
-			display: inline;
-			float:right;
-			width:auto;
+			float: right;
+			width: auto;
 		}
 	}
 	@include respond-at(920px) {
