@@ -3,6 +3,7 @@ title: Goalposts for 2016
 date: 2016-01-13
 location: Baltimore
 tags: goals, sassconf, json
+published: false
 ---
 
 As I wrapped up 2015 and meandered into 2016, I had a strong urge toward reflection and planning. While last year, I kept my goals simple<sup id="a1">[1](#f1)</sup>, this year I was inspired to revisit an idea a friend (Tasha over at [Metacookbook](http://metacookbook.com)) and I had attempted in previous years: Setting goals based on my upcoming birthday (so, in this case, 38 goals for my 38th year).
